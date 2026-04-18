@@ -1,0 +1,1021 @@
+order_id,date,customer_id,customer_name,product_id,product_name,category,quantity,price,country
+162,2024-10-06,1,Ahmed Hassan,110,Watch,Accessories,5,199.99,UAE
+671,2024-10-21,13,Tamer Gamal,106,T-Shirt,Clothing,8,29.99,Saudi Arabia
+898,2024-11-14,8,Mona Adel,109,Backpack,Accessories,9,59.99,UAE
+97,2024-04-13,10,Dina Mahmoud,111,Desk Lamp,Home,9,39.99,Jordan
+691,2023-07-27,5,Omar Youssef,111,Desk Lamp,Home,1,39.99,Morocco
+693,2023-03-24,12,Hana Sherif,104,Keyboard,Electronics,10,79.99,Saudi Arabia
+48,2024-03-31,9,Khaled Mostafa,109,Backpack,Accessories,9,59.99,Morocco
+760,2023-03-16,7,Youssef Tarek,113,Blender,Home,5,59.99,Saudi Arabia
+22,2023-05-02,8,Mona Adel,104,Keyboard,Electronics,7,79.99,Kuwait
+82,2024-11-02,10,Dina Mahmoud,114,Novel Book,Books,2,14.99,Morocco
+891,2024-02-05,7,Youssef Tarek,101,Laptop,Electronics,9,999.99,Egypt
+827,2024-04-21,1,Ahmed Hassan,113,Blender,Home,6,59.99,Saudi Arabia
+987,2024-10-07,11,Ali Fawzy,101,Laptop,Electronics,1,999.99,Morocco
+343,2024-09-02,11,Ali Fawzy,112,Coffee Maker,Home,7,89.99,Saudi Arabia
+41,2024-05-18,14,Reem Nabil,108,Sneakers,Clothing,10,89.99,Kuwait
+388,2024-06-16,8,Mona Adel,107,Jeans,Clothing,2,49.99,Jordan
+556,2023-02-19,6,Nour Ibrahim,105,Monitor,Electronics,6,349.99,Morocco
+608,2023-06-02,11,Ali Fawzy,110,Watch,Accessories,9,199.99,Morocco
+141,2023-08-21,4,Sara Khaled,109,Backpack,Accessories,6,59.99,UAE
+328,2023-08-05,2,Fatma Ali,114,Novel Book,Books,4,14.99,Saudi Arabia
+115,2023-12-07,1,Ahmed Hassan,108,Sneakers,Clothing,4,89.99,Saudi Arabia
+330,2023-06-20,8,Mona Adel,104,Keyboard,Electronics,4,79.99,Jordan
+532,2023-06-08,2,Fatma Ali,112,Coffee Maker,Home,10,89.99,Morocco
+803,2023-10-15,3,Mohamed Saeed,110,Watch,Accessories,6,199.99,Morocco
+685,2024-05-11,10,Dina Mahmoud,102,Smartphone,Electronics,2,699.99,UAE
+580,2023-06-21,8,Mona Adel,103,Headphones,Electronics,4,149.99,Kuwait
+164,2023-07-09,1,Ahmed Hassan,111,Desk Lamp,Home,2,39.99,Saudi Arabia
+946,2024-12-13,14,Reem Nabil,105,Monitor,Electronics,9,349.99,Kuwait
+469,2024-06-24,11,Ali Fawzy,115,Notebook Set,Stationery,2,9.99,Egypt
+420,2024-03-14,14,Reem Nabil,113,Blender,Home,4,59.99,UAE
+695,2023-04-04,14,Reem Nabil,108,Sneakers,Clothing,8,89.99,Kuwait
+280,2023-10-21,6,Nour Ibrahim,115,Notebook Set,Stationery,6,9.99,Egypt
+73,2023-01-14,14,Reem Nabil,110,Watch,Accessories,8,199.99,Jordan
+293,2023-03-15,8,Mona Adel,112,Coffee Maker,Home,1,89.99,Morocco
+1000,2024-03-13,10,Dina Mahmoud,106,T-Shirt,Clothing,4,29.99,UAE
+653,2023-06-05,4,Sara Khaled,108,Sneakers,Clothing,3,89.99,Morocco
+424,2023-08-18,14,Reem Nabil,105,Monitor,Electronics,5,349.99,Egypt
+751,2024-11-25,12,Hana Sherif,107,Jeans,Clothing,3,49.99,Jordan
+916,2024-01-19,4,Sara Khaled,101,Laptop,Electronics,5,999.99,Egypt
+397,2023-09-08,11,Ali Fawzy,110,Watch,Accessories,6,199.99,Jordan
+485,2023-11-09,3,Mohamed Saeed,107,Jeans,Clothing,4,49.99,Kuwait
+320,2023-04-16,14,Reem Nabil,113,Blender,Home,4,59.99,Morocco
+606,2024-01-01,10,Dina Mahmoud,111,Desk Lamp,Home,2,39.99,Jordan
+750,2024-12-10,6,Nour Ibrahim,106,T-Shirt,Clothing,1,29.99,Kuwait
+638,2023-08-14,8,Mona Adel,108,Sneakers,Clothing,8,89.99,UAE
+364,2023-03-31,13,Tamer Gamal,114,Novel Book,Books,8,14.99,Saudi Arabia
+731,2024-03-15,14,Reem Nabil,106,T-Shirt,Clothing,2,29.99,Egypt
+550,2024-10-31,12,Hana Sherif,102,Smartphone,Electronics,7,699.99,Morocco
+646,2024-04-08,2,Fatma Ali,104,Keyboard,Electronics,1,79.99,Morocco
+644,2023-08-22,14,Reem Nabil,115,Notebook Set,Stationery,10,9.99,UAE
+561,2023-03-21,4,Sara Khaled,104,Keyboard,Electronics,1,79.99,Morocco
+656,2023-03-13,1,Ahmed Hassan,110,Watch,Accessories,4,199.99,Egypt
+227,2023-05-31,4,Sara Khaled,104,Keyboard,Electronics,5,79.99,UAE
+967,2023-11-15,5,Omar Youssef,103,Headphones,Electronics,9,149.99,Kuwait
+475,2023-09-02,14,Reem Nabil,114,Novel Book,Books,5,14.99,Saudi Arabia
+734,2023-08-02,9,Khaled Mostafa,111,Desk Lamp,Home,3,39.99,Kuwait
+684,2024-07-21,13,Tamer Gamal,110,Watch,Accessories,3,199.99,Saudi Arabia
+701,2023-08-05,12,Hana Sherif,113,Blender,Home,8,59.99,Morocco
+571,2023-11-30,3,Mohamed Saeed,107,Jeans,Clothing,8,49.99,Jordan
+749,2024-02-03,7,Youssef Tarek,114,Novel Book,Books,2,14.99,Jordan
+551,2023-07-25,13,,112,Coffee Maker,Home,2,89.99,Morocco
+281,2024-11-12,2,Fatma Ali,103,Headphones,Electronics,3,149.99,UAE
+536,2024-03-26,8,Mona Adel,103,Headphones,Electronics,10,149.99,UAE
+34,2023-04-06,14,Reem Nabil,115,Notebook Set,Stationery,5,9.99,UAE
+197,2024-10-30,4,Sara Khaled,115,Notebook Set,Stationery,1,9.99,Egypt
+302,2023-04-26,14,Reem Nabil,105,Monitor,Electronics,1,349.99,Kuwait
+928,2024-04-09,6,Nour Ibrahim,115,Notebook Set,Stationery,7,9.99,Saudi Arabia
+794,2024-10-07,12,Hana Sherif,111,Desk Lamp,Home,7,39.99,Kuwait
+101,2023-09-19,12,Hana Sherif,102,Smartphone,Electronics,3,699.99,Morocco
+985,2023-11-21,14,Reem Nabil,111,Desk Lamp,Home,10,39.99,Jordan
+850,2024-08-20,10,Dina Mahmoud,102,Smartphone,Electronics,2,699.99,Saudi Arabia
+497,2023-10-17,7,Youssef Tarek,108,Sneakers,Clothing,7,89.99,UAE
+489,2023-09-26,5,Omar Youssef,113,Blender,Home,6,59.99,Egypt
+297,2023-06-09,13,Tamer Gamal,108,Sneakers,Clothing,8,89.99,UAE
+105,2023-05-09,15,Amr Hesham,115,Notebook Set,Stationery,3,9.99,Kuwait
+354,2024-12-30,14,Reem Nabil,107,Jeans,Clothing,3,49.99,Egypt
+166,2023-02-19,15,Amr Hesham,103,Headphones,Electronics,5,149.99,Morocco
+109,2024-04-24,2,Fatma Ali,114,Novel Book,Books,4,14.99,UAE
+230,2023-06-03,1,Ahmed Hassan,105,Monitor,Electronics,5,349.99,Kuwait
+669,2023-03-27,2,Fatma Ali,102,Smartphone,Electronics,3,699.99,UAE
+268,2023-05-18,1,Ahmed Hassan,108,Sneakers,Clothing,6,89.99,Kuwait
+172,2024-02-21,2,Fatma Ali,109,Backpack,Accessories,7,59.99,Kuwait
+839,2024-10-07,15,Amr Hesham,110,Watch,Accessories,9,199.99,UAE
+186,2023-11-08,5,Omar Youssef,115,Notebook Set,Stationery,,9.99,Kuwait
+573,2023-04-24,7,Youssef Tarek,105,Monitor,Electronics,5,349.99,Saudi Arabia
+952,2023-08-19,2,Fatma Ali,102,Smartphone,Electronics,6,699.99,Egypt
+276,2023-03-20,13,Tamer Gamal,104,Keyboard,Electronics,6,79.99,Morocco
+294,2023-09-10,11,Ali Fawzy,104,Keyboard,Electronics,9,79.99,Morocco
+705,2024-03-21,9,Khaled Mostafa,105,Monitor,Electronics,1,349.99,Jordan
+492,2024-01-02,15,Amr Hesham,105,Monitor,Electronics,5,349.99,Kuwait
+709,2024-04-07,15,Amr Hesham,114,Novel Book,Books,6,14.99,Egypt
+654,2023-02-15,8,Mona Adel,111,Desk Lamp,Home,3,39.99,Egypt
+474,2024-09-11,12,Hana Sherif,102,Smartphone,Electronics,1,699.99,UAE
+425,2024-03-09,13,Tamer Gamal,107,Jeans,Clothing,2,49.99,UAE
+982,2024-09-11,7,Youssef Tarek,111,Desk Lamp,Home,8,39.99,Saudi Arabia
+783,2023-03-05,12,Hana Sherif,103,Headphones,Electronics,8,149.99,Egypt
+223,2023-11-10,15,Amr Hesham,107,Jeans,Clothing,1,49.99,UAE
+781,2023-10-10,2,Fatma Ali,102,Smartphone,Electronics,10,699.99,Kuwait
+824,2024-02-03,1,Ahmed Hassan,110,Watch,Accessories,3,199.99,Egypt
+801,2023-03-05,13,Tamer Gamal,102,Smartphone,Electronics,10,699.99,Saudi Arabia
+436,2023-12-19,10,Dina Mahmoud,112,Coffee Maker,Home,4,89.99,Egypt
+980,2023-01-19,3,Mohamed Saeed,103,Headphones,Electronics,2,149.99,Saudi Arabia
+979,2024-06-26,6,Nour Ibrahim,102,Smartphone,Electronics,3,699.99,Morocco
+159,2023-09-23,4,Sara Khaled,109,Backpack,Accessories,10,59.99,UAE
+194,2024-09-20,4,Sara Khaled,107,Jeans,Clothing,5,49.99,Egypt
+939,2024-05-31,8,Mona Adel,115,Notebook Set,Stationery,5,9.99,Egypt
+825,2023-02-06,6,Nour Ibrahim,105,Monitor,Electronics,1,349.99,UAE
+835,2023-10-19,6,Nour Ibrahim,108,Sneakers,Clothing,7,89.99,Kuwait
+598,2023-11-12,6,Nour Ibrahim,109,Backpack,Accessories,10,59.99,Egypt
+367,2023-12-01,14,Reem Nabil,104,Keyboard,Electronics,2,79.99,Egypt
+859,2024-04-08,10,Dina Mahmoud,114,Novel Book,Books,5,14.99,Egypt
+450,2024-06-14,7,Youssef Tarek,113,Blender,Home,7,59.99,Jordan
+313,2023-11-14,5,Omar Youssef,113,Blender,Home,8,59.99,Jordan
+792,2023-01-25,5,Omar Youssef,113,Blender,Home,9,59.99,Jordan
+694,2024-06-15,12,Hana Sherif,109,Backpack,Accessories,4,59.99,Kuwait
+173,2024-02-20,4,Sara Khaled,102,Smartphone,Electronics,7,699.99,Saudi Arabia
+886,2023-09-28,14,Reem Nabil,111,Desk Lamp,Home,2,39.99,UAE
+123,2023-11-17,4,Sara Khaled,107,Jeans,Clothing,10,49.99,Egypt
+560,2023-07-15,1,Ahmed Hassan,113,Blender,Home,6,59.99,Kuwait
+880,2024-06-17,4,Sara Khaled,111,Desk Lamp,Home,4,39.99,Jordan
+113,2024-09-01,15,Amr Hesham,109,Backpack,Accessories,1,59.99,Jordan
+820,2024-04-28,3,Mohamed Saeed,110,Watch,Accessories,9,199.99,Jordan
+501,2024-03-06,10,Dina Mahmoud,107,Jeans,Clothing,4,49.99,Egypt
+353,2024-10-26,2,Fatma Ali,112,Coffee Maker,Home,5,89.99,Kuwait
+725,2024-09-18,10,Dina Mahmoud,112,Coffee Maker,Home,3,89.99,UAE
+682,2023-05-03,5,Omar Youssef,108,Sneakers,Clothing,5,89.99,Egypt
+816,2023-09-24,7,Youssef Tarek,109,Backpack,Accessories,5,59.99,Egypt
+572,2024-11-28,2,Fatma Ali,115,Notebook Set,Stationery,7,9.99,Kuwait
+35,2023-02-27,12,Hana Sherif,106,T-Shirt,Clothing,3,29.99,Saudi Arabia
+830,2023-01-12,1,Ahmed Hassan,107,Jeans,Clothing,6,49.99,Kuwait
+480,2024-10-07,13,Tamer Gamal,108,Sneakers,Clothing,8,89.99,Jordan
+378,2023-02-07,8,Mona Adel,108,Sneakers,Clothing,5,89.99,Saudi Arabia
+860,2023-07-04,4,Sara Khaled,103,Headphones,Electronics,4,149.99,UAE
+604,2023-09-02,7,Youssef Tarek,114,Novel Book,Books,4,14.99,UAE
+251,2023-11-22,13,Tamer Gamal,113,Blender,Home,2,59.99,Egypt
+282,2024-08-10,12,Hana Sherif,106,T-Shirt,Clothing,10,29.99,Jordan
+411,2023-09-20,2,Fatma Ali,105,Monitor,Electronics,5,349.99,Egypt
+406,2023-09-09,12,Hana Sherif,101,Laptop,Electronics,3,999.99,Kuwait
+774,2023-09-13,14,Reem Nabil,114,Novel Book,Books,2,14.99,Saudi Arabia
+856,2024-08-15,3,Mohamed Saeed,108,Sneakers,Clothing,4,89.99,Jordan
+745,2024-07-27,3,Mohamed Saeed,102,Smartphone,Electronics,2,699.99,Morocco
+287,2023-04-05,6,Nour Ibrahim,110,Watch,Accessories,1,199.99,Egypt
+113,2024-09-01,15,Amr Hesham,109,Backpack,Accessories,1,59.99,Jordan
+410,2024-09-16,2,Fatma Ali,111,Desk Lamp,Home,9,39.99,Kuwait
+374,2024-12-12,4,Sara Khaled,103,Headphones,Electronics,10,149.99,Egypt
+853,2023-05-29,2,Fatma Ali,106,T-Shirt,Clothing,10,29.99,Morocco
+476,2024-01-10,7,Youssef Tarek,115,Notebook Set,Stationery,3,9.99,Saudi Arabia
+616,2023-07-07,3,Mohamed Saeed,108,Sneakers,Clothing,5,89.99,Egypt
+635,2023-05-10,4,Sara Khaled,102,Smartphone,Electronics,5,699.99,UAE
+301,2023-09-29,15,Amr Hesham,101,Laptop,Electronics,4,999.99,Jordan
+112,2023-10-08,1,Ahmed Hassan,107,Jeans,Clothing,2,49.99,Egypt
+20,2023-02-21,2,,114,Novel Book,Books,9,14.99,Jordan
+778,2023-01-01,3,Mohamed Saeed,112,Coffee Maker,Home,2,89.99,Kuwait
+271,2024-04-02,2,Fatma Ali,103,Headphones,Electronics,10,149.99,Jordan
+796,2024-02-23,11,Ali Fawzy,105,Monitor,Electronics,3,349.99,UAE
+483,2023-04-03,4,Sara Khaled,105,Monitor,Electronics,6,349.99,Kuwait
+296,2024-01-25,15,Amr Hesham,107,Jeans,Clothing,7,49.99,Egypt
+315,2023-06-10,9,Khaled Mostafa,113,Blender,Home,3,59.99,Kuwait
+563,2023-10-12,13,Tamer Gamal,109,Backpack,Accessories,3,59.99,UAE
+391,2023-04-11,9,Khaled Mostafa,102,Smartphone,Electronics,4,699.99,Morocco
+936,2024-07-02,12,Hana Sherif,112,Coffee Maker,Home,10,89.99,Jordan
+746,2023-06-12,8,Mona Adel,104,Keyboard,Electronics,10,79.99,Saudi Arabia
+134,2023-12-29,15,Amr Hesham,102,Smartphone,Electronics,8,699.99,Morocco
+181,2023-12-02,13,Tamer Gamal,110,Watch,Accessories,7,199.99,Kuwait
+667,2023-11-26,6,Nour Ibrahim,115,Notebook Set,Stationery,2,9.99,Morocco
+846,2023-09-18,8,Mona Adel,105,Monitor,Electronics,7,349.99,Kuwait
+199,2023-07-26,4,Sara Khaled,106,T-Shirt,Clothing,3,29.99,Kuwait
+131,2023-05-29,9,Khaled Mostafa,102,Smartphone,Electronics,7,699.99,Saudi Arabia
+735,2023-08-19,6,Nour Ibrahim,105,Monitor,Electronics,6,349.99,Morocco
+426,2023-03-26,4,Sara Khaled,115,Notebook Set,Stationery,7,9.99,Kuwait
+713,2023-09-02,1,Ahmed Hassan,104,Keyboard,Electronics,7,79.99,Saudi Arabia
+486,2023-05-19,5,Omar Youssef,101,Laptop,Electronics,5,999.99,Jordan
+812,2023-04-06,11,Ali Fawzy,115,Notebook Set,Stationery,8,9.99,Egypt
+487,2023-07-06,13,Tamer Gamal,104,Keyboard,Electronics,6,79.99,Saudi Arabia
+548,2023-10-01,15,Amr Hesham,115,Notebook Set,Stationery,4,9.99,Morocco
+365,2024-04-28,4,Sara Khaled,109,Backpack,Accessories,7,59.99,Egypt
+506,2024-01-05,4,Sara Khaled,110,Watch,Accessories,2,199.99,Jordan
+867,2023-09-26,4,Sara Khaled,103,Headphones,Electronics,3,149.99,Jordan
+66,2024-08-20,15,Amr Hesham,110,Watch,Accessories,8,199.99,Morocco
+42,2024-07-11,1,Ahmed Hassan,113,Blender,Home,4,59.99,Egypt
+336,2023-07-01,2,Fatma Ali,115,Notebook Set,Stationery,4,9.99,Kuwait
+114,2023-10-04,15,Amr Hesham,109,Backpack,Accessories,9,59.99,UAE
+355,2023-11-12,11,Ali Fawzy,103,Headphones,Electronics,6,149.99,Kuwait
+177,2024-11-22,14,Reem Nabil,111,Desk Lamp,Home,3,39.99,Saudi Arabia
+55,2024-11-15,8,Mona Adel,103,Headphones,Electronics,9,149.99,Jordan
+15,2023-01-05,14,Reem Nabil,111,Desk Lamp,Home,6,39.99,UAE
+18,2023-10-14,7,Youssef Tarek,105,Monitor,Electronics,1,349.99,Morocco
+776,2023-06-14,7,Youssef Tarek,111,Desk Lamp,Home,8,39.99,Jordan
+3,2023-01-17,14,Reem Nabil,105,Monitor,Electronics,3,349.99,Kuwait
+92,2024-09-11,1,Ahmed Hassan,109,Backpack,Accessories,4,59.99,UAE
+473,2023-07-17,7,Youssef Tarek,111,Desk Lamp,Home,9,39.99,Saudi Arabia
+907,2024-06-27,1,Ahmed Hassan,113,Blender,Home,2,59.99,Kuwait
+941,2023-03-27,11,Ali Fawzy,111,Desk Lamp,Home,9,39.99,Jordan
+241,2023-05-06,6,Nour Ibrahim,107,Jeans,Clothing,8,49.99,Egypt
+526,2024-12-30,8,Mona Adel,108,Sneakers,Clothing,7,89.99,Morocco
+785,2023-02-17,7,Youssef Tarek,101,Laptop,Electronics,6,999.99,Saudi Arabia
+30,2024-02-20,6,Nour Ibrahim,109,Backpack,Accessories,2,59.99,Egypt
+125,2024-10-27,2,Fatma Ali,107,Jeans,Clothing,9,49.99,Jordan
+433,2023-03-27,8,Mona Adel,108,Sneakers,Clothing,1,89.99,Saudi Arabia
+702,2023-11-17,5,Omar Youssef,104,Keyboard,Electronics,8,79.99,Morocco
+665,2024-12-16,9,Khaled Mostafa,110,Watch,Accessories,3,199.99,Saudi Arabia
+901,2024-03-02,9,Khaled Mostafa,112,Coffee Maker,Home,5,89.99,Kuwait
+121,2023-09-26,1,Ahmed Hassan,114,Novel Book,Books,9,14.99,Saudi Arabia
+708,2023-04-06,6,Nour Ibrahim,115,Notebook Set,Stationery,8,9.99,Morocco
+311,2023-04-03,2,Fatma Ali,112,Coffee Maker,Home,2,89.99,Egypt
+742,2024-04-04,12,Hana Sherif,115,Notebook Set,Stationery,7,9.99,Kuwait
+512,2023-11-29,9,Khaled Mostafa,108,Sneakers,Clothing,8,89.99,Morocco
+314,2024-01-21,14,Reem Nabil,113,Blender,Home,5,59.99,Egypt
+221,2024-04-26,8,Mona Adel,109,Backpack,Accessories,3,59.99,Saudi Arabia
+254,2024-07-27,5,Omar Youssef,112,Coffee Maker,Home,9,89.99,UAE
+771,2023-10-05,3,Mohamed Saeed,102,Smartphone,Electronics,2,699.99,Kuwait
+191,2023-12-18,5,Omar Youssef,109,Backpack,Accessories,1,59.99,Saudi Arabia
+10,2023-10-15,4,Sara Khaled,105,Monitor,Electronics,8,349.99,Jordan
+260,2024-06-03,9,Khaled Mostafa,104,Keyboard,Electronics,7,79.99,UAE
+739,2023-09-23,12,,110,Watch,Accessories,7,199.99,Kuwait
+608,2023-06-02,11,Ali Fawzy,110,Watch,Accessories,9,199.99,Morocco
+819,2024-12-21,8,Mona Adel,115,Notebook Set,Stationery,3,9.99,Egypt
+981,2024-04-07,2,Fatma Ali,103,Headphones,Electronics,6,149.99,Kuwait
+510,2024-05-14,6,Nour Ibrahim,101,Laptop,Electronics,8,999.99,Morocco
+977,2024-07-13,13,Tamer Gamal,114,Novel Book,Books,9,14.99,Egypt
+174,2023-11-20,8,Mona Adel,114,Novel Book,Books,3,14.99,UAE
+178,2024-07-14,1,Ahmed Hassan,113,Blender,Home,3,59.99,Jordan
+588,2024-02-25,6,Nour Ibrahim,103,Headphones,Electronics,3,149.99,UAE
+120,2023-10-27,8,Mona Adel,111,Desk Lamp,Home,5,39.99,Jordan
+198,2023-03-24,7,Youssef Tarek,102,Smartphone,Electronics,8,699.99,UAE
+799,2024-07-24,1,Ahmed Hassan,112,Coffee Maker,Home,9,89.99,Morocco
+207,2023-10-25,15,Amr Hesham,109,Backpack,Accessories,1,59.99,Morocco
+517,2024-09-18,9,Khaled Mostafa,103,Headphones,Electronics,8,149.99,Kuwait
+72,2023-11-10,8,Mona Adel,111,Desk Lamp,Home,7,39.99,Kuwait
+157,2023-03-26,14,Reem Nabil,108,Sneakers,Clothing,9,89.99,Egypt
+732,2024-11-01,12,Hana Sherif,108,Sneakers,Clothing,6,89.99,Morocco
+151,2024-08-09,9,Khaled Mostafa,110,Watch,Accessories,8,199.99,Egypt
+933,2023-06-23,13,Tamer Gamal,103,Headphones,Electronics,6,149.99,UAE
+70,2023-01-20,7,Youssef Tarek,107,Jeans,Clothing,3,49.99,Kuwait
+149,2023-02-28,4,Sara Khaled,114,Novel Book,Books,8,14.99,Kuwait
+32,2023-07-16,5,Omar Youssef,114,Novel Book,Books,5,14.99,Saudi Arabia
+193,2024-05-03,9,Khaled Mostafa,106,T-Shirt,Clothing,4,29.99,Jordan
+342,2023-05-28,3,Mohamed Saeed,106,T-Shirt,Clothing,6,29.99,UAE
+64,2024-04-18,10,Dina Mahmoud,112,Coffee Maker,Home,3,89.99,Morocco
+470,2024-02-22,11,Ali Fawzy,111,Desk Lamp,Home,6,39.99,Saudi Arabia
+321,2023-06-22,7,Youssef Tarek,113,Blender,Home,6,59.99,UAE
+639,2023-02-14,2,Fatma Ali,114,Novel Book,Books,4,14.99,Egypt
+269,2024-08-31,4,Sara Khaled,101,Laptop,Electronics,7,999.99,Morocco
+161,2024-03-21,3,Mohamed Saeed,106,T-Shirt,Clothing,9,29.99,Kuwait
+661,2023-07-25,14,Reem Nabil,111,Desk Lamp,Home,1,39.99,Jordan
+969,2023-03-10,7,Youssef Tarek,103,Headphones,Electronics,3,149.99,Kuwait
+246,2023-05-11,6,Nour Ibrahim,109,Backpack,Accessories,3,59.99,UAE
+626,2024-02-12,6,Nour Ibrahim,111,Desk Lamp,Home,6,39.99,Saudi Arabia
+236,2023-03-20,10,Dina Mahmoud,103,Headphones,Electronics,9,149.99,Jordan
+478,2023-07-23,12,Hana Sherif,112,Coffee Maker,Home,2,89.99,UAE
+316,2024-03-24,1,Ahmed Hassan,113,Blender,Home,10,59.99,Egypt
+95,2024-03-13,2,,102,Smartphone,Electronics,10,699.99,UAE
+897,2024-06-27,5,Omar Youssef,113,Blender,Home,9,59.99,Saudi Arabia
+460,2023-10-17,3,Mohamed Saeed,107,Jeans,Clothing,1,49.99,Saudi Arabia
+62,2023-07-01,5,Omar Youssef,115,Notebook Set,Stationery,2,9.99,Jordan
+931,2024-08-22,6,Nour Ibrahim,108,Sneakers,Clothing,2,89.99,Kuwait
+862,2023-01-29,5,Omar Youssef,103,Headphones,Electronics,1,149.99,Jordan
+215,2024-04-29,6,Nour Ibrahim,113,Blender,Home,6,59.99,Kuwait
+871,2024-03-25,6,Nour Ibrahim,114,Novel Book,Books,1,14.99,Kuwait
+184,2023-10-22,11,Ali Fawzy,112,Coffee Maker,Home,8,89.99,Kuwait
+909,2023-07-13,8,Mona Adel,103,Headphones,Electronics,8,149.99,UAE
+612,2023-11-17,6,Nour Ibrahim,111,Desk Lamp,Home,4,39.99,UAE
+840,2024-11-12,12,Hana Sherif,103,Headphones,Electronics,5,149.99,Kuwait
+375,2023-12-26,8,Mona Adel,104,Keyboard,Electronics,4,79.99,Jordan
+636,2023-06-15,4,Sara Khaled,101,Laptop,Electronics,3,999.99,UAE
+479,2024-03-06,10,Dina Mahmoud,101,Laptop,Electronics,2,999.99,Jordan
+605,2024-08-07,6,Nour Ibrahim,101,Laptop,Electronics,6,999.99,UAE
+919,2023-12-14,9,Khaled Mostafa,103,Headphones,Electronics,2,149.99,Egypt
+334,2024-02-22,6,Nour Ibrahim,113,Blender,Home,8,59.99,Kuwait
+171,2024-10-29,6,Nour Ibrahim,111,Desk Lamp,Home,3,39.99,UAE
+463,2023-04-04,3,Mohamed Saeed,114,Novel Book,Books,4,14.99,Morocco
+935,2024-12-16,8,Mona Adel,101,Laptop,Electronics,4,999.99,Jordan
+423,2024-07-31,3,Mohamed Saeed,109,Backpack,Accessories,4,59.99,Morocco
+929,2024-12-01,13,Tamer Gamal,111,Desk Lamp,Home,2,39.99,Morocco
+565,2023-05-19,14,Reem Nabil,114,Novel Book,Books,5,14.99,UAE
+46,2024-07-04,14,Reem Nabil,108,Sneakers,Clothing,7,89.99,Saudi Arabia
+515,2024-12-19,3,Mohamed Saeed,108,Sneakers,Clothing,3,89.99,Egypt
+686,2023-11-27,3,Mohamed Saeed,103,Headphones,Electronics,4,149.99,Saudi Arabia
+594,2024-01-06,15,Amr Hesham,101,Laptop,Electronics,1,999.99,Morocco
+457,2023-09-01,2,Fatma Ali,111,Desk Lamp,Home,2,39.99,Egypt
+575,2023-09-19,10,Dina Mahmoud,106,T-Shirt,Clothing,9,29.99,UAE
+744,2023-12-20,1,Ahmed Hassan,111,Desk Lamp,Home,1,39.99,Saudi Arabia
+224,2023-01-16,15,Amr Hesham,115,Notebook Set,Stationery,3,9.99,Egypt
+784,2023-01-12,15,Amr Hesham,103,Headphones,Electronics,8,149.99,Morocco
+543,2023-10-18,5,Omar Youssef,114,Novel Book,Books,3,14.99,Saudi Arabia
+756,2024-03-15,6,Nour Ibrahim,111,Desk Lamp,Home,9,39.99,UAE
+690,2023-08-27,15,Amr Hesham,110,Watch,Accessories,6,199.99,Saudi Arabia
+624,2024-10-13,9,Khaled Mostafa,115,Notebook Set,Stationery,8,9.99,Kuwait
+23,2023-08-02,7,Youssef Tarek,114,Novel Book,Books,3,14.99,UAE
+618,2023-08-04,12,Hana Sherif,105,Monitor,Electronics,4,349.99,UAE
+99,2024-03-26,6,Nour Ibrahim,111,Desk Lamp,Home,10,39.99,UAE
+927,2024-12-12,8,Mona Adel,103,Headphones,Electronics,6,149.99,Morocco
+398,2023-07-09,8,Mona Adel,111,Desk Lamp,Home,10,39.99,Saudi Arabia
+688,2023-08-07,8,Mona Adel,111,Desk Lamp,Home,8,39.99,Kuwait
+627,2023-12-29,2,Fatma Ali,110,Watch,Accessories,8,199.99,UAE
+482,2024-05-14,6,Nour Ibrahim,114,Novel Book,Books,6,14.99,UAE
+363,2023-08-28,6,Nour Ibrahim,101,Laptop,Electronics,9,999.99,UAE
+300,2024-09-14,1,Ahmed Hassan,114,Novel Book,Books,4,14.99,Morocco
+766,2023-11-07,6,Nour Ibrahim,103,Headphones,Electronics,9,149.99,Jordan
+444,2024-05-22,13,Tamer Gamal,108,Sneakers,Clothing,5,89.99,Morocco
+113,2024-09-01,15,Amr Hesham,109,Backpack,Accessories,1,59.99,Jordan
+621,2024-02-21,9,Khaled Mostafa,107,Jeans,Clothing,5,49.99,Saudi Arabia
+973,2023-12-02,12,Hana Sherif,105,Monitor,Electronics,10,349.99,Jordan
+809,2024-09-13,15,Amr Hesham,106,T-Shirt,Clothing,4,29.99,Kuwait
+704,2023-05-15,8,Mona Adel,106,T-Shirt,Clothing,1,29.99,Morocco
+875,2023-08-28,5,Omar Youssef,112,Coffee Maker,Home,8,89.99,Kuwait
+431,2024-03-26,2,Fatma Ali,109,Backpack,Accessories,3,59.99,UAE
+507,2024-08-13,10,Dina Mahmoud,102,Smartphone,Electronics,4,699.99,Morocco
+324,2023-03-04,4,Sara Khaled,102,Smartphone,Electronics,10,699.99,UAE
+959,2023-04-27,7,Youssef Tarek,102,Smartphone,Electronics,4,699.99,Morocco
+519,2023-07-25,11,Ali Fawzy,105,Monitor,Electronics,10,349.99,Egypt
+116,2024-02-13,5,Omar Youssef,110,Watch,Accessories,,199.99,Jordan
+111,2023-10-11,14,Reem Nabil,110,Watch,Accessories,5,199.99,Egypt
+117,2023-09-01,12,Hana Sherif,106,T-Shirt,Clothing,5,29.99,Kuwait
+738,2024-03-04,2,Fatma Ali,107,Jeans,Clothing,10,49.99,Kuwait
+196,2024-11-04,5,Omar Youssef,105,Monitor,Electronics,9,349.99,Jordan
+335,2023-11-06,13,Tamer Gamal,101,Laptop,Electronics,1,999.99,Egypt
+829,2023-06-07,6,Nour Ibrahim,109,Backpack,Accessories,10,59.99,Morocco
+206,2023-10-30,6,Nour Ibrahim,103,Headphones,Electronics,6,149.99,UAE
+747,2024-01-24,5,Omar Youssef,115,Notebook Set,Stationery,5,9.99,Egypt
+130,2024-08-20,2,Fatma Ali,101,Laptop,Electronics,7,999.99,Egypt
+833,2024-04-06,1,Ahmed Hassan,105,Monitor,Electronics,1,349.99,Egypt
+306,2023-05-14,4,Sara Khaled,113,Blender,Home,3,59.99,Jordan
+889,2024-09-23,10,Dina Mahmoud,113,Blender,Home,10,59.99,Egypt
+383,2024-08-24,6,Nour Ibrahim,108,Sneakers,Clothing,1,89.99,UAE
+960,2023-12-15,4,Sara Khaled,110,Watch,Accessories,3,199.99,UAE
+435,2024-08-08,11,Ali Fawzy,106,T-Shirt,Clothing,10,29.99,UAE
+780,2024-07-05,14,Reem Nabil,106,T-Shirt,Clothing,6,29.99,Saudi Arabia
+488,2023-08-07,9,Khaled Mostafa,103,Headphones,Electronics,2,149.99,UAE
+775,2024-01-11,12,Hana Sherif,113,Blender,Home,6,59.99,UAE
+143,2023-06-08,7,Youssef Tarek,113,Blender,Home,2,59.99,Morocco
+163,2023-08-20,7,Youssef Tarek,113,Blender,Home,9,59.99,Egypt
+248,2023-05-27,10,Dina Mahmoud,113,Blender,Home,,59.99,Kuwait
+493,2024-06-20,9,Khaled Mostafa,111,Desk Lamp,Home,8,39.99,UAE
+593,2023-12-25,8,Mona Adel,108,Sneakers,Clothing,1,89.99,Kuwait
+451,2024-05-10,5,Omar Youssef,105,Monitor,Electronics,2,349.99,Morocco
+4,2024-05-26,14,Reem Nabil,103,Headphones,Electronics,7,149.99,Saudi Arabia
+192,2023-08-26,13,Tamer Gamal,114,Novel Book,Books,2,14.99,Morocco
+578,2023-02-19,11,Ali Fawzy,109,Backpack,Accessories,2,59.99,Jordan
+950,2023-11-03,13,Tamer Gamal,101,Laptop,Electronics,9,999.99,Egypt
+986,2024-11-17,1,Ahmed Hassan,105,Monitor,Electronics,9,349.99,Jordan
+836,2024-09-07,5,Omar Youssef,110,Watch,Accessories,9,199.99,Jordan
+984,2023-08-25,2,Fatma Ali,112,Coffee Maker,Home,4,89.99,Jordan
+338,2023-12-31,9,Khaled Mostafa,106,T-Shirt,Clothing,9,29.99,Kuwait
+890,2023-01-15,7,Youssef Tarek,114,Novel Book,Books,9,14.99,Egypt
+214,2023-04-07,4,,110,Watch,Accessories,8,199.99,Egypt
+39,2023-06-11,2,Fatma Ali,110,Watch,Accessories,2,199.99,Saudi Arabia
+312,2024-07-24,15,Amr Hesham,114,Novel Book,Books,3,14.99,Kuwait
+975,2024-04-15,13,Tamer Gamal,106,T-Shirt,Clothing,6,29.99,Saudi Arabia
+845,2023-10-22,8,Mona Adel,112,Coffee Maker,Home,5,89.99,UAE
+962,2024-10-18,6,Nour Ibrahim,115,Notebook Set,Stationery,3,9.99,Morocco
+86,2024-01-14,14,Reem Nabil,114,Novel Book,Books,8,14.99,Egypt
+903,2023-04-16,5,Omar Youssef,101,Laptop,Electronics,7,999.99,Saudi Arabia
+937,2024-08-19,1,Ahmed Hassan,102,Smartphone,Electronics,5,699.99,UAE
+999,2023-11-25,15,Amr Hesham,101,Laptop,Electronics,4,999.99,Egypt
+954,2024-11-21,2,Fatma Ali,112,Coffee Maker,Home,1,89.99,Egypt
+586,2023-06-13,12,Hana Sherif,112,Coffee Maker,Home,6,89.99,UAE
+817,2023-11-08,1,Ahmed Hassan,114,Novel Book,Books,1,14.99,Saudi Arabia
+642,2024-09-28,7,Youssef Tarek,113,Blender,Home,5,59.99,Jordan
+557,2023-01-01,6,Nour Ibrahim,105,Monitor,Electronics,10,349.99,UAE
+562,2023-12-03,15,Amr Hesham,109,Backpack,Accessories,2,59.99,UAE
+910,2023-05-16,11,Ali Fawzy,107,Jeans,Clothing,6,49.99,Morocco
+331,2024-07-25,11,Ali Fawzy,101,Laptop,Electronics,9,999.99,UAE
+292,2023-06-30,6,Nour Ibrahim,107,Jeans,Clothing,9,49.99,UAE
+352,2024-01-24,6,Nour Ibrahim,107,Jeans,Clothing,3,49.99,Jordan
+225,2024-11-19,4,Sara Khaled,111,Desk Lamp,Home,5,39.99,Kuwait
+465,2024-10-05,2,Fatma Ali,101,Laptop,Electronics,5,999.99,UAE
+534,2024-03-23,4,Sara Khaled,104,Keyboard,Electronics,5,79.99,UAE
+285,2023-11-01,14,Reem Nabil,115,Notebook Set,Stationery,10,9.99,UAE
+869,2023-02-27,4,Sara Khaled,102,Smartphone,Electronics,10,699.99,Morocco
+138,2024-01-21,12,Hana Sherif,103,Headphones,Electronics,3,149.99,Jordan
+503,2023-04-23,15,Amr Hesham,110,Watch,Accessories,7,199.99,Morocco
+795,2024-05-19,1,Ahmed Hassan,103,Headphones,Electronics,2,149.99,Saudi Arabia
+900,2024-05-31,10,Dina Mahmoud,102,Smartphone,Electronics,9,699.99,Morocco
+405,2024-12-02,4,Sara Khaled,115,Notebook Set,Stationery,1,9.99,Kuwait
+456,2023-02-26,14,Reem Nabil,111,Desk Lamp,Home,7,39.99,Jordan
+68,2024-08-22,2,Fatma Ali,112,Coffee Maker,Home,10,89.99,Jordan
+553,2023-01-13,14,Reem Nabil,104,Keyboard,Electronics,7,79.99,Morocco
+892,2024-06-13,1,Ahmed Hassan,111,Desk Lamp,Home,4,39.99,Saudi Arabia
+384,2024-10-02,6,Nour Ibrahim,103,Headphones,Electronics,6,149.99,Saudi Arabia
+208,2024-09-08,2,Fatma Ali,104,Keyboard,Electronics,9,79.99,Egypt
+357,2023-12-03,7,Youssef Tarek,109,Backpack,Accessories,4,59.99,Morocco
+429,2023-09-27,13,Tamer Gamal,114,Novel Book,Books,6,14.99,Jordan
+525,2024-06-10,2,Fatma Ali,102,Smartphone,Electronics,3,699.99,Kuwait
+226,2023-03-14,9,Khaled Mostafa,109,Backpack,Accessories,3,59.99,Saudi Arabia
+59,2023-01-31,3,Mohamed Saeed,102,Smartphone,Electronics,7,699.99,Saudi Arabia
+259,2023-12-09,11,Ali Fawzy,104,Keyboard,Electronics,3,79.99,Morocco
+922,2024-12-08,1,Ahmed Hassan,114,Novel Book,Books,10,14.99,Morocco
+154,2024-10-30,10,,107,Jeans,Clothing,6,49.99,Morocco
+202,2023-10-31,7,Youssef Tarek,101,Laptop,Electronics,8,999.99,Kuwait
+596,2024-03-20,11,Ali Fawzy,110,Watch,Accessories,6,199.99,Egypt
+179,2023-02-14,3,Mohamed Saeed,115,Notebook Set,Stationery,7,9.99,Kuwait
+389,2024-11-03,2,Fatma Ali,113,Blender,Home,7,59.99,Saudi Arabia
+244,2024-01-29,11,Ali Fawzy,101,Laptop,Electronics,3,999.99,Saudi Arabia
+38,2024-06-11,11,Ali Fawzy,103,Headphones,Electronics,7,149.99,Kuwait
+5,2023-08-02,12,Hana Sherif,108,Sneakers,Clothing,3,89.99,Saudi Arabia
+940,2024-08-20,7,Youssef Tarek,106,T-Shirt,Clothing,6,29.99,UAE
+764,2023-05-11,2,Fatma Ali,107,Jeans,Clothing,1,49.99,UAE
+263,2023-08-26,11,Ali Fawzy,102,Smartphone,Electronics,2,699.99,Saudi Arabia
+126,2023-08-18,1,Ahmed Hassan,113,Blender,Home,6,59.99,Egypt
+160,2023-04-04,13,Tamer Gamal,105,Monitor,Electronics,5,349.99,Kuwait
+51,2023-03-28,12,Hana Sherif,113,Blender,Home,4,59.99,Kuwait
+569,2024-06-26,2,Fatma Ali,115,Notebook Set,Stationery,3,9.99,Saudi Arabia
+108,2024-10-07,5,Omar Youssef,105,Monitor,Electronics,4,349.99,Jordan
+658,2024-01-31,6,Nour Ibrahim,110,Watch,Accessories,9,199.99,Saudi Arabia
+918,2024-01-06,6,Nour Ibrahim,111,Desk Lamp,Home,8,39.99,UAE
+471,2024-03-10,10,Dina Mahmoud,111,Desk Lamp,Home,3,39.99,Egypt
+834,2023-07-26,8,Mona Adel,106,T-Shirt,Clothing,9,29.99,Egypt
+832,2023-02-04,11,Ali Fawzy,107,Jeans,Clothing,5,49.99,Jordan
+620,2024-03-25,5,Omar Youssef,106,T-Shirt,Clothing,4,29.99,UAE
+185,2024-11-30,14,Reem Nabil,104,Keyboard,Electronics,9,79.99,Saudi Arabia
+570,2023-08-27,6,Nour Ibrahim,101,Laptop,Electronics,3,999.99,Egypt
+180,2023-10-08,7,Youssef Tarek,101,Laptop,Electronics,1,999.99,Saudi Arabia
+318,2024-11-13,1,Ahmed Hassan,103,Headphones,Electronics,2,149.99,Kuwait
+520,2023-11-21,13,Tamer Gamal,104,Keyboard,Electronics,2,79.99,Jordan
+625,2023-08-25,9,Khaled Mostafa,111,Desk Lamp,Home,1,39.99,Jordan
+177,2024-11-22,14,Reem Nabil,111,Desk Lamp,Home,3,39.99,Saudi Arabia
+272,2024-03-26,11,Ali Fawzy,108,Sneakers,Clothing,9,89.99,Saudi Arabia
+513,2024-04-07,3,Mohamed Saeed,104,Keyboard,Electronics,10,79.99,UAE
+920,2024-03-01,10,Dina Mahmoud,112,Coffee Maker,Home,4,89.99,Kuwait
+502,2024-11-25,2,Fatma Ali,110,Watch,Accessories,9,199.99,Egypt
+996,2023-08-20,12,Hana Sherif,113,Blender,Home,9,59.99,Kuwait
+339,2024-05-31,5,Omar Youssef,110,Watch,Accessories,7,199.99,Morocco
+677,2024-01-07,10,Dina Mahmoud,105,Monitor,Electronics,4,349.99,UAE
+110,2023-12-21,8,Mona Adel,109,Backpack,Accessories,8,59.99,Jordan
+912,2024-06-01,4,Sara Khaled,107,Jeans,Clothing,7,49.99,Morocco
+822,2023-05-01,12,Hana Sherif,103,Headphones,Electronics,7,149.99,Kuwait
+994,2024-04-10,4,Sara Khaled,111,Desk Lamp,Home,2,39.99,Morocco
+340,2024-08-25,1,Ahmed Hassan,114,Novel Book,Books,2,14.99,Saudi Arabia
+229,2023-02-13,1,Ahmed Hassan,106,T-Shirt,Clothing,8,29.99,Kuwait
+514,2023-07-14,12,Hana Sherif,101,Laptop,Electronics,10,999.99,Morocco
+813,2023-05-12,5,Omar Youssef,113,Blender,Home,1,59.99,Morocco
+888,2023-06-08,12,Hana Sherif,113,Blender,Home,,59.99,UAE
+797,2023-10-18,9,,109,Backpack,Accessories,2,59.99,Saudi Arabia
+133,2024-08-24,14,Reem Nabil,105,Monitor,Electronics,1,349.99,Kuwait
+949,2024-01-27,14,Reem Nabil,103,Headphones,Electronics,6,149.99,UAE
+634,2023-06-27,4,Sara Khaled,115,Notebook Set,Stationery,2,9.99,UAE
+204,2023-06-01,12,Hana Sherif,111,Desk Lamp,Home,10,39.99,UAE
+407,2023-08-11,1,Ahmed Hassan,108,Sneakers,Clothing,8,89.99,Egypt
+925,2024-07-23,7,Youssef Tarek,114,Novel Book,Books,9,14.99,Kuwait
+94,2023-06-17,2,Fatma Ali,113,Blender,Home,9,59.99,UAE
+989,2024-10-31,3,Mohamed Saeed,112,Coffee Maker,Home,7,89.99,Kuwait
+676,2024-12-27,10,Dina Mahmoud,113,Blender,Home,6,59.99,Morocco
+278,2024-08-04,9,,107,Jeans,Clothing,3,49.99,Morocco
+720,2024-06-21,3,Mohamed Saeed,106,T-Shirt,Clothing,7,29.99,Jordan
+139,2023-02-18,7,Youssef Tarek,104,Keyboard,Electronics,8,79.99,Morocco
+997,2023-04-23,3,Mohamed Saeed,112,Coffee Maker,Home,4,89.99,Saudi Arabia
+85,2023-08-08,5,Omar Youssef,107,Jeans,Clothing,7,49.99,UAE
+971,2023-08-26,14,Reem Nabil,109,Backpack,Accessories,9,59.99,Kuwait
+441,2024-06-10,14,,113,Blender,Home,8,59.99,Jordan
+255,2024-06-28,12,Hana Sherif,105,Monitor,Electronics,7,349.99,Morocco
+614,2024-09-12,1,Ahmed Hassan,115,Notebook Set,Stationery,6,9.99,Saudi Arabia
+629,2023-04-18,9,Khaled Mostafa,108,Sneakers,Clothing,4,89.99,Egypt
+253,2023-06-16,11,Ali Fawzy,112,Coffee Maker,Home,3,89.99,Kuwait
+419,2023-04-06,6,Nour Ibrahim,108,Sneakers,Clothing,2,89.99,Egypt
+710,2023-12-09,5,Omar Youssef,113,Blender,Home,4,59.99,Morocco
+231,2024-07-10,13,Tamer Gamal,102,Smartphone,Electronics,2,699.99,UAE
+359,2024-04-06,4,Sara Khaled,110,Watch,Accessories,6,199.99,UAE
+33,2024-12-31,10,Dina Mahmoud,107,Jeans,Clothing,10,49.99,UAE
+421,2024-05-03,1,Ahmed Hassan,109,Backpack,Accessories,4,59.99,UAE
+142,2023-10-27,5,Omar Youssef,113,Blender,Home,6,59.99,Jordan
+958,2023-03-13,13,Tamer Gamal,102,Smartphone,Electronics,4,699.99,Kuwait
+455,2023-01-07,9,Khaled Mostafa,102,Smartphone,Electronics,5,699.99,Egypt
+266,2024-06-19,8,Mona Adel,106,T-Shirt,Clothing,9,29.99,Morocco
+664,2023-08-07,11,Ali Fawzy,115,Notebook Set,Stationery,8,9.99,Saudi Arabia
+416,2024-09-25,5,Omar Youssef,109,Backpack,Accessories,2,59.99,Morocco
+861,2023-06-29,13,Tamer Gamal,108,Sneakers,Clothing,6,89.99,UAE
+129,2023-10-28,4,Sara Khaled,109,Backpack,Accessories,3,59.99,Kuwait
+715,2023-07-20,14,Reem Nabil,110,Watch,Accessories,2,199.99,Saudi Arabia
+660,2023-09-19,12,Hana Sherif,111,Desk Lamp,Home,6,39.99,Jordan
+770,2024-11-21,4,Sara Khaled,101,Laptop,Electronics,4,999.99,Egypt
+37,2023-09-08,1,Ahmed Hassan,114,Novel Book,Books,9,14.99,Saudi Arabia
+170,2024-03-17,5,Omar Youssef,107,Jeans,Clothing,6,49.99,Kuwait
+585,2024-11-18,14,Reem Nabil,115,Notebook Set,Stationery,2,9.99,Jordan
+165,2024-08-19,14,Reem Nabil,115,Notebook Set,Stationery,9,9.99,Kuwait
+210,2024-05-19,12,Hana Sherif,115,Notebook Set,Stationery,2,9.99,Saudi Arabia
+7,2024-10-29,3,Mohamed Saeed,101,Laptop,Electronics,4,999.99,Morocco
+765,2024-10-17,8,Mona Adel,110,Watch,Accessories,3,199.99,Morocco
+524,2024-07-24,10,Dina Mahmoud,111,Desk Lamp,Home,5,39.99,Morocco
+308,2024-10-13,15,Amr Hesham,105,Monitor,Electronics,3,349.99,Egypt
+697,2024-09-06,14,Reem Nabil,115,Notebook Set,Stationery,7,9.99,UAE
+923,2024-01-30,9,Khaled Mostafa,106,T-Shirt,Clothing,,29.99,UAE
+630,2023-04-24,12,Hana Sherif,111,Desk Lamp,Home,2,39.99,Morocco
+333,2024-09-15,8,Mona Adel,113,Blender,Home,3,59.99,Jordan
+505,2023-09-04,10,Dina Mahmoud,104,Keyboard,Electronics,8,79.99,Kuwait
+264,2024-11-28,11,Ali Fawzy,114,Novel Book,Books,3,14.99,Morocco
+218,2024-02-29,4,Sara Khaled,105,Monitor,Electronics,3,349.99,UAE
+743,2023-10-26,3,Mohamed Saeed,103,Headphones,Electronics,10,149.99,Jordan
+332,2024-06-06,15,Amr Hesham,115,Notebook Set,Stationery,6,9.99,Kuwait
+779,2024-11-27,9,Khaled Mostafa,115,Notebook Set,Stationery,10,9.99,Jordan
+67,2024-03-10,15,Amr Hesham,104,Keyboard,Electronics,4,79.99,Saudi Arabia
+77,2023-06-21,15,Amr Hesham,108,Sneakers,Clothing,1,89.99,UAE
+40,2023-09-02,12,Hana Sherif,111,Desk Lamp,,10,39.99,UAE
+793,2024-06-03,15,Amr Hesham,105,Monitor,Electronics,9,349.99,Morocco
+360,2024-10-28,10,Dina Mahmoud,107,Jeans,Clothing,7,49.99,UAE
+102,2024-10-11,5,Omar Youssef,101,Laptop,Electronics,6,999.99,Saudi Arabia
+448,2023-08-12,5,Omar Youssef,102,Smartphone,Electronics,8,699.99,Morocco
+554,2024-03-31,12,Hana Sherif,108,Sneakers,Clothing,10,89.99,Kuwait
+458,2024-12-22,2,Fatma Ali,102,Smartphone,Electronics,8,699.99,Jordan
+854,2023-05-01,4,Sara Khaled,102,Smartphone,Electronics,1,699.99,Saudi Arabia
+991,2023-10-09,13,Tamer Gamal,102,Smartphone,Electronics,2,699.99,Kuwait
+298,2024-08-25,15,Amr Hesham,105,Monitor,Electronics,9,349.99,Egypt
+617,2024-07-27,5,Omar Youssef,105,Monitor,Electronics,1,349.99,Morocco
+430,2024-04-06,10,Dina Mahmoud,108,Sneakers,Clothing,4,89.99,Kuwait
+521,2023-04-03,2,Fatma Ali,109,Backpack,Accessories,6,59.99,Kuwait
+29,2023-08-12,15,Amr Hesham,112,Coffee Maker,Home,8,89.99,Morocco
+831,2024-11-28,6,Nour Ibrahim,108,Sneakers,Clothing,8,89.99,Jordan
+833,2024-04-06,1,Ahmed Hassan,105,Monitor,Electronics,1,349.99,Egypt
+993,2023-07-23,13,Tamer Gamal,101,Laptop,Electronics,4,999.99,Morocco
+6,2024-09-04,2,Fatma Ali,111,Desk Lamp,Home,3,39.99,Morocco
+140,2024-08-21,5,Omar Youssef,105,Monitor,Electronics,9,349.99,Jordan
+53,2023-03-17,5,Omar Youssef,103,Headphones,Electronics,6,149.99,UAE
+755,2023-05-22,11,Ali Fawzy,103,Headphones,Electronics,4,149.99,Egypt
+795,2024-05-19,1,Ahmed Hassan,103,Headphones,Electronics,2,149.99,Saudi Arabia
+402,2023-08-26,15,Amr Hesham,103,Headphones,Electronics,7,149.99,Jordan
+238,2023-01-04,7,Youssef Tarek,104,Keyboard,Electronics,3,79.99,Morocco
+921,2024-07-24,10,Dina Mahmoud,107,Jeans,Clothing,1,49.99,Morocco
+729,2023-08-24,7,Youssef Tarek,115,Notebook Set,Stationery,8,9.99,UAE
+326,2024-08-14,10,Dina Mahmoud,108,Sneakers,Clothing,6,89.99,Kuwait
+657,2023-05-04,4,Sara Khaled,111,Desk Lamp,Home,7,39.99,Egypt
+857,2023-03-19,2,Fatma Ali,106,T-Shirt,Clothing,2,29.99,Egypt
+584,2023-07-09,1,Ahmed Hassan,113,Blender,Home,7,59.99,Kuwait
+348,2024-04-30,1,Ahmed Hassan,110,Watch,Accessories,2,199.99,UAE
+544,2024-04-07,6,Nour Ibrahim,104,Keyboard,Electronics,4,79.99,UAE
+711,2023-01-21,15,Amr Hesham,103,Headphones,Electronics,3,149.99,Kuwait
+878,2024-11-09,4,Sara Khaled,113,Blender,Home,2,59.99,Jordan
+754,2023-08-29,11,Ali Fawzy,103,Headphones,Electronics,7,149.99,Jordan
+583,2023-05-20,8,Mona Adel,113,Blender,Home,3,59.99,Jordan
+675,2024-12-12,14,Reem Nabil,104,Keyboard,Electronics,4,79.99,Morocco
+806,2024-05-01,4,Sara Khaled,110,Watch,Accessories,5,199.99,Jordan
+983,2023-10-25,3,Mohamed Saeed,103,Headphones,Electronics,2,149.99,Kuwait
+412,2024-12-19,6,Nour Ibrahim,112,Coffee Maker,Home,4,89.99,Kuwait
+603,2024-08-24,15,Amr Hesham,113,Blender,Home,1,59.99,Saudi Arabia
+531,2023-05-06,1,Ahmed Hassan,106,T-Shirt,Clothing,2,29.99,Egypt
+659,2024-06-01,4,Sara Khaled,114,Novel Book,Books,3,14.99,Jordan
+6,2024-09-04,2,Fatma Ali,111,Desk Lamp,Home,3,39.99,Morocco
+228,2023-07-10,11,Ali Fawzy,101,Laptop,Electronics,10,999.99,Kuwait
+377,2024-11-10,7,Youssef Tarek,110,Watch,Accessories,3,199.99,Saudi Arabia
+523,2024-09-04,6,Nour Ibrahim,114,Novel Book,Books,6,14.99,Jordan
+26,2024-07-30,8,Mona Adel,101,Laptop,Electronics,7,999.99,UAE
+209,2024-11-14,12,Hana Sherif,105,Monitor,Electronics,9,349.99,Morocco
+325,2024-09-27,7,Youssef Tarek,110,Watch,Accessories,6,199.99,Saudi Arabia
+44,2024-05-15,10,Dina Mahmoud,111,Desk Lamp,Home,5,39.99,Saudi Arabia
+680,2024-11-15,6,Nour Ibrahim,105,Monitor,Electronics,9,349.99,Jordan
+201,2023-04-08,4,Sara Khaled,105,Monitor,Electronics,1,349.99,Morocco
+379,2024-11-02,11,Ali Fawzy,115,Notebook Set,Stationery,,9.99,Morocco
+674,2023-02-26,6,Nour Ibrahim,111,Desk Lamp,Home,9,39.99,Morocco
+21,2024-01-30,5,Omar Youssef,107,Jeans,Clothing,8,49.99,UAE
+351,2023-08-24,3,Mohamed Saeed,105,Monitor,Electronics,4,349.99,Egypt
+310,2024-06-15,6,Nour Ibrahim,105,Monitor,Electronics,3,349.99,Saudi Arabia
+445,2024-12-11,12,Hana Sherif,102,Smartphone,Electronics,8,699.99,Morocco
+509,2024-07-15,3,Mohamed Saeed,109,Backpack,Accessories,2,59.99,Jordan
+13,2024-06-28,3,Mohamed Saeed,112,Coffee Maker,Home,7,89.99,Jordan
+31,2024-09-23,7,Youssef Tarek,112,Coffee Maker,Home,9,89.99,UAE
+496,2024-02-18,13,,104,Keyboard,Electronics,6,79.99,Morocco
+508,2023-01-22,3,Mohamed Saeed,115,Notebook Set,Stationery,5,9.99,Egypt
+432,2024-02-13,1,Ahmed Hassan,115,Notebook Set,Stationery,2,9.99,Egypt
+240,2023-09-02,11,Ali Fawzy,109,Backpack,Accessories,9,59.99,Morocco
+908,2023-03-07,2,Fatma Ali,114,Novel Book,Books,5,14.99,Kuwait
+798,2023-10-28,3,Mohamed Saeed,101,Laptop,Electronics,3,999.99,Jordan
+87,2023-02-19,3,Mohamed Saeed,110,Watch,Accessories,6,199.99,Jordan
+381,2024-12-29,6,Nour Ibrahim,105,Monitor,Electronics,6,349.99,Saudi Arabia
+195,2024-03-10,6,Nour Ibrahim,112,Coffee Maker,Home,10,89.99,Egypt
+581,2023-08-24,4,Sara Khaled,112,Coffee Maker,Home,,89.99,Kuwait
+932,2023-02-08,3,Mohamed Saeed,111,Desk Lamp,Home,4,39.99,Jordan
+168,2023-06-18,7,Youssef Tarek,112,Coffee Maker,Home,8,89.99,Saudi Arabia
+590,2024-04-06,1,Ahmed Hassan,103,Headphones,Electronics,4,149.99,Kuwait
+786,2024-05-01,2,Fatma Ali,102,Smartphone,Electronics,6,699.99,Egypt
+290,2023-07-28,9,Khaled Mostafa,109,Backpack,Accessories,1,59.99,UAE
+275,2023-05-12,2,Fatma Ali,106,T-Shirt,Clothing,5,29.99,Jordan
+347,2023-03-16,9,Khaled Mostafa,110,Watch,Accessories,10,199.99,Jordan
+289,2024-04-09,14,Reem Nabil,110,Watch,Accessories,9,199.99,Kuwait
+895,2023-02-02,13,Tamer Gamal,104,Keyboard,Electronics,7,79.99,Jordan
+835,2023-10-19,6,Nour Ibrahim,108,Sneakers,Clothing,7,89.99,Kuwait
+443,2023-03-10,4,Sara Khaled,104,Keyboard,Electronics,8,79.99,Saudi Arabia
+698,2023-11-23,4,Sara Khaled,115,Notebook Set,Stationery,,9.99,Saudi Arabia
+211,2023-05-20,7,Youssef Tarek,107,Jeans,Clothing,9,49.99,Egypt
+607,2023-11-02,9,Khaled Mostafa,103,Headphones,Electronics,7,149.99,Jordan
+652,2023-11-24,8,Mona Adel,107,Jeans,Clothing,1,49.99,Jordan
+393,2023-03-16,12,Hana Sherif,108,Sneakers,Clothing,4,89.99,Egypt
+974,2023-08-16,11,Ali Fawzy,103,Headphones,Electronics,2,149.99,Egypt
+938,2023-11-14,4,Sara Khaled,113,Blender,Home,4,59.99,Morocco
+826,2023-07-24,15,Amr Hesham,111,Desk Lamp,Home,8,39.99,Morocco
+906,2023-06-19,8,Mona Adel,108,Sneakers,Clothing,5,89.99,Egypt
+516,2024-11-02,10,Dina Mahmoud,109,Backpack,Accessories,2,59.99,UAE
+961,2024-03-02,11,Ali Fawzy,110,Watch,Accessories,4,199.99,Morocco
+762,2023-11-05,6,Nour Ibrahim,107,Jeans,Clothing,2,49.99,Morocco
+841,2024-04-14,11,Ali Fawzy,111,Desk Lamp,Home,6,39.99,UAE
+369,2024-08-23,6,Nour Ibrahim,108,Sneakers,Clothing,4,89.99,Egypt
+769,2024-05-22,4,Sara Khaled,105,Monitor,Electronics,,349.99,UAE
+576,2024-02-23,8,Mona Adel,110,Watch,Accessories,2,199.99,Jordan
+61,2024-04-18,9,Khaled Mostafa,108,Sneakers,Clothing,9,89.99,Saudi Arabia
+394,2024-10-19,12,Hana Sherif,102,Smartphone,Electronics,6,699.99,Jordan
+148,2023-08-07,1,Ahmed Hassan,114,Novel Book,Books,,14.99,Kuwait
+538,2023-06-01,8,Mona Adel,115,Notebook Set,Stationery,1,9.99,UAE
+278,2024-08-04,9,,107,Jeans,Clothing,3,49.99,Morocco
+150,2024-11-25,7,Youssef Tarek,105,Monitor,Electronics,8,349.99,Jordan
+595,2023-08-07,13,Tamer Gamal,114,Novel Book,Books,7,14.99,Jordan
+539,2024-03-13,2,Fatma Ali,107,Jeans,Clothing,2,49.99,Jordan
+631,2024-08-10,6,Nour Ibrahim,103,Headphones,Electronics,10,149.99,Saudi Arabia
+11,2023-05-08,15,Amr Hesham,106,T-Shirt,Clothing,10,29.99,Saudi Arabia
+924,2023-06-22,13,Tamer Gamal,108,Sneakers,Clothing,6,89.99,Saudi Arabia
+415,2023-03-20,12,Hana Sherif,105,Monitor,Electronics,5,349.99,Egypt
+522,2024-02-08,15,Amr Hesham,115,Notebook Set,Stationery,9,9.99,Saudi Arabia
+491,2023-03-26,8,Mona Adel,115,Notebook Set,Stationery,1,9.99,UAE
+870,2023-02-12,14,Reem Nabil,112,Coffee Maker,Home,3,89.99,Egypt
+167,2023-10-17,7,Youssef Tarek,101,Laptop,Electronics,10,999.99,UAE
+804,2024-01-05,8,Mona Adel,112,Coffee Maker,Home,8,89.99,Saudi Arabia
+459,2023-01-06,12,Hana Sherif,113,Blender,Home,1,59.99,UAE
+568,2023-08-29,3,Mohamed Saeed,109,Backpack,Accessories,3,59.99,UAE
+98,2024-11-30,12,Hana Sherif,104,Keyboard,Electronics,9,79.99,Egypt
+727,2023-12-01,10,Dina Mahmoud,101,Laptop,Electronics,3,999.99,UAE
+147,2024-09-20,3,Mohamed Saeed,102,Smartphone,Electronics,5,699.99,Morocco
+851,2023-11-16,6,Nour Ibrahim,112,Coffee Maker,Home,9,89.99,Morocco
+291,2024-04-24,8,Mona Adel,110,Watch,Accessories,6,199.99,Saudi Arabia
+914,2024-04-24,12,Hana Sherif,102,Smartphone,Electronics,10,699.99,Kuwait
+934,2023-06-02,5,Omar Youssef,115,Notebook Set,Stationery,10,9.99,Kuwait
+477,2023-01-05,11,Ali Fawzy,107,Jeans,Clothing,6,49.99,Morocco
+299,2023-06-18,10,Dina Mahmoud,103,Headphones,Electronics,5,149.99,UAE
+119,2023-01-17,1,Ahmed Hassan,113,Blender,Home,8,59.99,Kuwait
+154,2024-10-30,10,,107,Jeans,Clothing,6,49.99,Morocco
+838,2024-12-20,8,Mona Adel,108,Sneakers,Clothing,10,89.99,Jordan
+852,2024-01-17,13,Tamer Gamal,107,Jeans,Clothing,3,49.99,Saudi Arabia
+305,2024-08-11,3,Mohamed Saeed,115,Notebook Set,Stationery,8,9.99,Egypt
+118,2023-05-03,12,Hana Sherif,105,Monitor,Electronics,2,349.99,Egypt
+579,2024-05-11,9,Khaled Mostafa,109,Backpack,Accessories,7,59.99,Morocco
+329,2024-11-17,12,Hana Sherif,108,Sneakers,Clothing,10,89.99,Saudi Arabia
+810,2024-09-28,10,Dina Mahmoud,106,T-Shirt,Clothing,5,29.99,Morocco
+484,2024-06-08,8,Mona Adel,104,Keyboard,Electronics,7,79.99,Jordan
+564,2024-04-28,14,Reem Nabil,101,Laptop,Electronics,10,999.99,Kuwait
+917,2023-02-09,13,Tamer Gamal,102,Smartphone,Electronics,1,699.99,Jordan
+262,2024-03-27,10,Dina Mahmoud,102,Smartphone,Electronics,6,699.99,UAE
+752,2024-07-22,13,Tamer Gamal,112,Coffee Maker,Home,1,89.99,Jordan
+499,2024-07-29,7,Youssef Tarek,101,Laptop,Electronics,8,999.99,Egypt
+761,2023-10-17,1,Ahmed Hassan,105,Monitor,Electronics,6,349.99,Egypt
+232,2023-09-14,7,Youssef Tarek,108,Sneakers,Clothing,3,89.99,UAE
+67,2024-03-10,15,Amr Hesham,104,Keyboard,Electronics,4,79.99,Saudi Arabia
+837,2024-12-13,11,Ali Fawzy,109,Backpack,Accessories,10,59.99,Jordan
+273,2023-01-14,7,Youssef Tarek,106,T-Shirt,Clothing,4,29.99,Saudi Arabia
+722,2024-02-24,15,Amr Hesham,109,Backpack,Accessories,4,59.99,Jordan
+877,2024-01-23,2,Fatma Ali,101,Laptop,Electronics,1,999.99,Morocco
+518,2023-03-22,12,Hana Sherif,111,Desk Lamp,Home,5,39.99,Kuwait
+726,2023-10-01,6,Nour Ibrahim,105,Monitor,Electronics,4,349.99,Jordan
+926,2024-05-30,10,Dina Mahmoud,106,T-Shirt,Clothing,7,29.99,Jordan
+9,2024-06-08,5,Omar Youssef,111,Desk Lamp,Home,10,39.99,Morocco
+623,2024-12-25,5,Omar Youssef,110,Watch,Accessories,5,199.99,Kuwait
+270,2023-07-06,6,Nour Ibrahim,110,Watch,Accessories,4,199.99,UAE
+730,2023-07-24,10,Dina Mahmoud,110,Watch,Accessories,2,199.99,Morocco
+899,2024-07-31,7,Youssef Tarek,107,Jeans,Clothing,1,49.99,UAE
+50,2023-07-06,4,Sara Khaled,110,Watch,Accessories,2,199.99,Morocco
+93,2023-06-30,3,Mohamed Saeed,115,Notebook Set,Stationery,2,9.99,Jordan
+882,2024-06-11,14,Reem Nabil,109,Backpack,Accessories,1,59.99,Saudi Arabia
+902,2023-11-25,2,Fatma Ali,110,Watch,Accessories,4,199.99,Egypt
+587,2024-10-08,10,Dina Mahmoud,110,Watch,Accessories,9,199.99,Saudi Arabia
+681,2023-03-17,6,Nour Ibrahim,104,Keyboard,Electronics,8,79.99,Kuwait
+666,2024-12-26,14,Reem Nabil,110,Watch,Accessories,8,199.99,Kuwait
+872,2023-10-24,12,Hana Sherif,105,Monitor,Electronics,4,349.99,Jordan
+865,2023-12-30,14,Reem Nabil,113,Blender,Home,5,59.99,Morocco
+395,2024-02-10,3,Mohamed Saeed,107,Jeans,Clothing,5,49.99,Kuwait
+220,2023-01-23,8,Mona Adel,110,Watch,Accessories,2,199.99,Jordan
+462,2023-07-31,15,Amr Hesham,110,Watch,Accessories,4,199.99,Morocco
+107,2024-05-18,3,Mohamed Saeed,114,Novel Book,Books,6,14.99,Saudi Arabia
+547,2024-01-15,2,Fatma Ali,109,Backpack,Accessories,9,59.99,Egypt
+700,2023-01-15,15,Amr Hesham,109,Backpack,Accessories,2,59.99,UAE
+22,2023-05-02,8,Mona Adel,104,Keyboard,Electronics,7,79.99,Kuwait
+418,2023-08-07,7,Youssef Tarek,104,Keyboard,Electronics,4,79.99,Egypt
+24,2023-11-23,7,Youssef Tarek,106,T-Shirt,Clothing,5,29.99,Egypt
+69,2023-09-10,10,Dina Mahmoud,109,Backpack,Accessories,6,59.99,Kuwait
+152,2023-03-28,10,Dina Mahmoud,109,Backpack,Accessories,10,59.99,Egypt
+27,2024-05-20,12,Hana Sherif,111,Desk Lamp,Home,7,39.99,UAE
+955,2023-06-19,6,Nour Ibrahim,109,Backpack,Accessories,,59.99,Saudi Arabia
+995,2023-09-24,4,Sara Khaled,108,Sneakers,Clothing,9,89.99,Kuwait
+599,2023-07-26,9,Khaled Mostafa,104,Keyboard,Electronics,7,79.99,Saudi Arabia
+219,2023-06-16,9,Khaled Mostafa,105,Monitor,Electronics,1,349.99,Jordan
+527,2023-10-15,15,Amr Hesham,115,Notebook Set,Stationery,4,9.99,Jordan
+942,2024-12-27,12,Hana Sherif,115,Notebook Set,Stationery,9,9.99,Morocco
+545,2024-03-18,9,Khaled Mostafa,105,Monitor,Electronics,1,349.99,Morocco
+650,2023-08-22,4,Sara Khaled,111,Desk Lamp,Home,5,39.99,UAE
+414,2023-07-27,10,Dina Mahmoud,105,Monitor,Electronics,4,349.99,UAE
+234,2024-06-16,5,Omar Youssef,103,Headphones,Electronics,7,149.99,Kuwait
+283,2024-05-13,3,,102,Smartphone,Electronics,4,699.99,Jordan
+413,2024-11-17,2,Fatma Ali,110,Watch,Accessories,4,199.99,Morocco
+768,2023-04-02,15,Amr Hesham,102,Smartphone,Electronics,4,699.99,UAE
+673,2023-02-17,9,Khaled Mostafa,113,Blender,Home,10,59.99,Morocco
+758,2023-06-20,7,Youssef Tarek,115,Notebook Set,Stationery,7,9.99,Kuwait
+707,2024-08-04,15,Amr Hesham,109,Backpack,Accessories,8,59.99,Jordan
+904,2023-12-02,3,Mohamed Saeed,106,T-Shirt,Clothing,9,29.99,UAE
+303,2024-10-27,15,Amr Hesham,110,Watch,Accessories,1,199.99,UAE
+385,2023-06-24,6,Nour Ibrahim,103,Headphones,Electronics,1,149.99,Morocco
+267,2023-05-03,12,Hana Sherif,105,Monitor,Electronics,1,349.99,UAE
+864,2024-09-22,15,Amr Hesham,112,Coffee Maker,Home,5,89.99,Jordan
+808,2024-06-22,10,Dina Mahmoud,108,Sneakers,Clothing,10,89.99,Morocco
+440,2024-12-09,12,Hana Sherif,107,Jeans,Clothing,7,49.99,Saudi Arabia
+619,2023-10-30,12,Hana Sherif,111,Desk Lamp,Home,5,39.99,Egypt
+992,2024-02-12,6,Nour Ibrahim,109,Backpack,Accessories,9,59.99,Jordan
+464,2024-11-03,11,Ali Fawzy,106,T-Shirt,Clothing,10,29.99,Egypt
+678,2024-05-20,9,Khaled Mostafa,109,Backpack,Accessories,4,59.99,Jordan
+789,2023-06-01,10,Dina Mahmoud,112,Coffee Maker,Home,2,89.99,Kuwait
+537,2023-07-08,13,Tamer Gamal,111,Desk Lamp,Home,1,39.99,UAE
+100,2023-06-27,12,Hana Sherif,114,Novel Book,Books,3,14.99,Jordan
+217,2023-10-12,9,Khaled Mostafa,101,Laptop,Electronics,9,999.99,Kuwait
+346,2023-07-02,13,Tamer Gamal,113,Blender,Home,7,59.99,Kuwait
+953,2024-02-29,2,Fatma Ali,115,Notebook Set,Stationery,10,9.99,UAE
+243,2023-01-31,9,Khaled Mostafa,112,Coffee Maker,Home,9,89.99,Morocco
+965,2024-06-17,4,Sara Khaled,110,Watch,Accessories,6,199.99,Jordan
+362,2024-07-27,11,Ali Fawzy,112,Coffee Maker,Home,6,89.99,Kuwait
+376,2023-10-23,15,Amr Hesham,102,Smartphone,Electronics,4,699.99,Morocco
+112,2023-10-08,1,Ahmed Hassan,107,Jeans,Clothing,2,49.99,Egypt
+403,2024-01-14,12,Hana Sherif,112,Coffee Maker,Home,6,89.99,Morocco
+648,2023-09-16,1,Ahmed Hassan,111,Desk Lamp,Home,6,39.99,Jordan
+529,2023-09-23,3,Mohamed Saeed,106,T-Shirt,Clothing,7,29.99,Saudi Arabia
+247,2024-10-04,7,Youssef Tarek,114,Novel Book,Books,3,14.99,Saudi Arabia
+427,2023-04-07,10,Dina Mahmoud,113,Blender,Home,3,59.99,Morocco
+790,2023-12-23,3,Mohamed Saeed,113,Blender,Home,4,59.99,Egypt
+90,2024-07-12,9,Khaled Mostafa,110,Watch,Accessories,4,199.99,UAE
+189,2024-06-03,1,Ahmed Hassan,103,Headphones,Electronics,7,149.99,UAE
+56,2024-03-27,8,Mona Adel,101,Laptop,Electronics,9,999.99,Egypt
+622,2024-08-11,7,Youssef Tarek,112,Coffee Maker,Home,8,89.99,Morocco
+559,2024-06-11,14,Reem Nabil,115,Notebook Set,Stationery,2,9.99,Saudi Arabia
+672,2024-08-18,1,Ahmed Hassan,101,Laptop,Electronics,2,999.99,Kuwait
+233,2023-11-26,8,Mona Adel,109,Backpack,Accessories,9,59.99,Jordan
+295,2024-03-30,3,Mohamed Saeed,107,Jeans,Clothing,1,49.99,Saudi Arabia
+511,2024-04-04,2,Fatma Ali,103,Headphones,Electronics,3,149.99,Egypt
+670,2023-07-22,7,Youssef Tarek,107,Jeans,Clothing,5,49.99,UAE
+222,2023-05-18,8,Mona Adel,105,Monitor,Electronics,10,349.99,Kuwait
+692,2024-12-05,8,Mona Adel,109,Backpack,Accessories,,59.99,UAE
+252,2023-07-02,14,Reem Nabil,113,Blender,Home,10,59.99,UAE
+893,2023-08-30,8,Mona Adel,105,Monitor,Electronics,6,349.99,Kuwait
+964,2024-01-02,15,Amr Hesham,106,T-Shirt,Clothing,5,29.99,Kuwait
+307,2024-03-06,6,Nour Ibrahim,107,Jeans,Clothing,4,49.99,UAE
+782,2023-10-27,6,Nour Ibrahim,107,Jeans,Clothing,4,49.99,UAE
+203,2023-11-19,14,Reem Nabil,109,Backpack,Accessories,3,59.99,UAE
+128,2024-06-21,10,Dina Mahmoud,105,Monitor,Electronics,1,349.99,Egypt
+609,2024-07-04,10,Dina Mahmoud,110,Watch,Accessories,7,199.99,Saudi Arabia
+63,2024-05-22,13,Tamer Gamal,103,Headphones,Electronics,8,149.99,Egypt
+103,2023-05-31,15,Amr Hesham,115,Notebook Set,Stationery,5,9.99,Egypt
+896,2023-10-22,13,Tamer Gamal,113,Blender,Home,1,59.99,UAE
+43,2023-03-24,5,Omar Youssef,113,Blender,Home,9,59.99,Jordan
+169,2024-11-13,6,Nour Ibrahim,111,Desk Lamp,Home,1,39.99,Jordan
+905,2024-04-08,7,Youssef Tarek,104,Keyboard,Electronics,9,79.99,Jordan
+213,2024-07-14,8,Mona Adel,105,Monitor,Electronics,,349.99,Kuwait
+372,2024-04-27,2,Fatma Ali,115,Notebook Set,Stationery,3,9.99,Jordan
+132,2023-05-21,9,Khaled Mostafa,114,Novel Book,Books,7,14.99,Saudi Arabia
+452,2024-08-09,10,Dina Mahmoud,113,Blender,Home,8,59.99,Egypt
+976,2024-05-10,3,Mohamed Saeed,105,Monitor,Electronics,9,349.99,Kuwait
+498,2024-05-13,1,Ahmed Hassan,108,Sneakers,Clothing,2,89.99,Kuwait
+951,2024-08-29,11,Ali Fawzy,112,Coffee Maker,Home,3,89.99,UAE
+12,2023-10-15,8,Mona Adel,105,Monitor,Electronics,8,349.99,Jordan
+597,2023-04-08,14,Reem Nabil,106,T-Shirt,Clothing,1,29.99,Egypt
+57,2023-07-10,7,Youssef Tarek,114,Novel Book,Books,3,14.99,Kuwait
+461,2024-06-16,15,Amr Hesham,113,Blender,Home,10,59.99,Jordan
+858,2024-10-17,12,Hana Sherif,102,Smartphone,Electronics,5,699.99,Jordan
+309,2024-05-05,3,Mohamed Saeed,105,Monitor,Electronics,5,349.99,Morocco
+883,2023-01-19,13,Tamer Gamal,110,Watch,Accessories,2,199.99,Jordan
+472,2024-05-24,9,Khaled Mostafa,101,Laptop,Electronics,1,999.99,Egypt
+261,2023-01-14,2,Fatma Ali,102,Smartphone,Electronics,9,699.99,UAE
+382,2024-05-15,13,Tamer Gamal,105,Monitor,Electronics,10,349.99,Morocco
+696,2024-05-01,2,Fatma Ali,110,Watch,Accessories,4,199.99,Morocco
+814,2023-03-14,15,Amr Hesham,104,Keyboard,Electronics,8,79.99,Kuwait
+242,2023-06-12,14,Reem Nabil,107,Jeans,Clothing,1,49.99,Saudi Arabia
+249,2023-07-18,13,Tamer Gamal,111,Desk Lamp,Home,2,39.99,Morocco
+577,2023-04-22,15,Amr Hesham,108,Sneakers,Clothing,9,89.99,Jordan
+645,2024-07-13,2,Fatma Ali,107,Jeans,Clothing,4,49.99,Egypt
+60,2024-07-31,11,Ali Fawzy,113,Blender,Home,8,59.99,Saudi Arabia
+404,2023-01-07,7,Youssef Tarek,108,Sneakers,Clothing,5,89.99,Saudi Arabia
+651,2024-09-08,2,Fatma Ali,103,Headphones,Electronics,2,149.99,Kuwait
+84,2024-03-11,15,Amr Hesham,102,Smartphone,Electronics,7,699.99,Egypt
+350,2023-02-11,6,Nour Ibrahim,102,Smartphone,Electronics,4,699.99,Kuwait
+417,2024-02-21,5,Omar Youssef,101,Laptop,Electronics,9,999.99,Jordan
+8,2023-01-11,8,,107,Jeans,Clothing,8,49.99,Kuwait
+885,2024-06-06,2,Fatma Ali,101,Laptop,Electronics,6,999.99,Egypt
+689,2023-01-30,2,Fatma Ali,114,Novel Book,Books,8,14.99,Morocco
+662,2024-05-07,5,Omar Youssef,105,Monitor,Electronics,6,349.99,Saudi Arabia
+304,2023-01-02,9,Khaled Mostafa,114,Novel Book,Books,4,14.99,Egypt
+542,2023-07-09,12,Hana Sherif,115,Notebook Set,Stationery,3,9.99,UAE
+574,2023-12-20,14,Reem Nabil,113,Blender,Home,4,59.99,Kuwait
+610,2023-04-08,7,Youssef Tarek,110,Watch,Accessories,1,199.99,Saudi Arabia
+135,2023-08-07,8,Mona Adel,105,Monitor,Electronics,10,349.99,Morocco
+957,2024-11-21,8,Mona Adel,115,Notebook Set,Stationery,9,9.99,Morocco
+124,2024-11-11,8,Mona Adel,114,Novel Book,Books,2,14.99,Jordan
+753,2024-08-05,4,Sara Khaled,111,Desk Lamp,Home,1,39.99,UAE
+81,2024-05-02,8,Mona Adel,104,Keyboard,Electronics,6,79.99,UAE
+212,2024-04-03,15,Amr Hesham,111,Desk Lamp,Home,9,39.99,UAE
+894,2024-05-20,5,Omar Youssef,108,Sneakers,Clothing,7,89.99,Jordan
+467,2024-01-17,4,Sara Khaled,113,Blender,Home,7,59.99,Saudi Arabia
+948,2024-01-23,15,Amr Hesham,109,Backpack,Accessories,5,59.99,Saudi Arabia
+741,2023-07-29,3,Mohamed Saeed,103,Headphones,Electronics,6,149.99,Kuwait
+721,2024-04-17,14,,111,Desk Lamp,Home,6,39.99,Jordan
+988,2024-07-08,5,Omar Youssef,109,Backpack,Accessories,4,59.99,Jordan
+349,2023-06-28,4,Sara Khaled,109,Backpack,Accessories,6,59.99,Jordan
+968,2023-12-20,9,Khaled Mostafa,109,Backpack,Accessories,7,59.99,Kuwait
+956,2024-02-25,7,,105,Monitor,Electronics,8,349.99,UAE
+83,2023-05-01,10,Dina Mahmoud,115,Notebook Set,Stationery,6,9.99,Kuwait
+855,2023-07-01,14,Reem Nabil,114,Novel Book,Books,7,14.99,Kuwait
+615,2024-01-28,6,Nour Ibrahim,113,Blender,Home,8,59.99,Jordan
+76,2023-10-20,1,Ahmed Hassan,113,Blender,Home,5,59.99,Jordan
+75,2023-09-27,10,Dina Mahmoud,109,Backpack,Accessories,3,59.99,Saudi Arabia
+679,2024-01-24,15,Amr Hesham,105,Monitor,Electronics,2,349.99,Kuwait
+358,2024-12-21,12,Hana Sherif,110,Watch,Accessories,5,199.99,Jordan
+717,2023-08-28,8,Mona Adel,102,Smartphone,Electronics,9,699.99,Egypt
+763,2024-02-07,3,Mohamed Saeed,115,Notebook Set,Stationery,3,9.99,Jordan
+712,2024-08-13,9,Khaled Mostafa,114,Novel Book,Books,9,14.99,UAE
+972,2023-12-05,10,Dina Mahmoud,105,Monitor,Electronics,10,349.99,UAE
+434,2024-03-16,8,Mona Adel,106,T-Shirt,Clothing,8,29.99,UAE
+277,2024-12-12,7,Youssef Tarek,112,Coffee Maker,Home,7,89.99,Morocco
+777,2024-08-01,8,Mona Adel,114,Novel Book,Books,5,14.99,UAE
+146,2023-07-01,3,Mohamed Saeed,112,Coffee Maker,Home,6,89.99,Morocco
+124,2024-11-11,8,Mona Adel,114,Novel Book,Books,2,14.99,Jordan
+104,2023-05-01,3,Mohamed Saeed,110,Watch,Accessories,9,199.99,Egypt
+45,2024-07-22,9,Khaled Mostafa,111,Desk Lamp,Home,5,39.99,Saudi Arabia
+187,2024-07-29,10,Dina Mahmoud,112,Coffee Maker,Home,7,89.99,UAE
+868,2023-03-14,5,Omar Youssef,107,Jeans,Clothing,7,49.99,Morocco
+453,2023-03-06,7,Youssef Tarek,105,Monitor,Electronics,7,349.99,Jordan
+322,2023-12-09,14,Reem Nabil,104,Keyboard,Electronics,1,79.99,Saudi Arabia
+849,2024-05-16,10,Dina Mahmoud,113,Blender,Home,10,59.99,Egypt
+438,2024-02-27,13,Tamer Gamal,110,Watch,Accessories,6,199.99,Jordan
+844,2024-06-29,14,Reem Nabil,104,Keyboard,Electronics,2,79.99,Egypt
+137,2023-02-13,6,Nour Ibrahim,106,T-Shirt,Clothing,10,29.99,Egypt
+155,2023-03-23,5,Omar Youssef,110,Watch,Accessories,8,199.99,Saudi Arabia
+655,2023-12-12,4,Sara Khaled,106,T-Shirt,Clothing,5,29.99,Egypt
+239,2024-01-22,2,Fatma Ali,108,Sneakers,Clothing,4,89.99,Saudi Arabia
+552,2024-07-22,14,Reem Nabil,109,Backpack,Accessories,8,59.99,Egypt
+978,2023-06-30,5,Omar Youssef,111,Desk Lamp,Home,4,39.99,Saudi Arabia
+911,2023-05-22,8,Mona Adel,110,Watch,Accessories,4,199.99,Morocco
+19,2023-03-26,10,Dina Mahmoud,109,Backpack,Accessories,6,59.99,Egypt
+401,2023-10-15,12,Hana Sherif,113,Blender,Home,2,59.99,Morocco
+874,2024-07-30,11,Ali Fawzy,104,Keyboard,Electronics,3,79.99,Saudi Arabia
+643,2024-09-07,14,Reem Nabil,103,Headphones,Electronics,8,149.99,Saudi Arabia
+257,2024-08-26,7,Youssef Tarek,102,Smartphone,Electronics,8,699.99,Kuwait
+373,2023-07-29,12,Hana Sherif,110,Watch,Accessories,4,199.99,Kuwait
+740,2023-02-28,15,Amr Hesham,103,Headphones,Electronics,4,149.99,Egypt
+323,2023-08-08,13,Tamer Gamal,105,Monitor,Electronics,10,349.99,Jordan
+144,2024-01-31,9,Khaled Mostafa,109,Backpack,Accessories,7,59.99,Egypt
+637,2023-12-18,13,Tamer Gamal,112,Coffee Maker,Home,10,89.99,Kuwait
+2,2023-06-13,4,Sara Khaled,102,Smartphone,Electronics,1,699.99,Egypt
+74,2024-10-31,14,Reem Nabil,105,Monitor,Electronics,3,349.99,Jordan
+446,2023-05-27,12,Hana Sherif,112,Coffee Maker,Home,1,89.99,UAE
+49,2024-08-02,5,Omar Youssef,107,Jeans,Clothing,5,49.99,UAE
+566,2024-09-26,14,Reem Nabil,109,Backpack,Accessories,5,59.99,Jordan
+337,2024-11-21,3,Mohamed Saeed,107,Jeans,Clothing,5,49.99,Jordan
+807,2024-10-10,9,Khaled Mostafa,115,Notebook Set,Stationery,8,9.99,Saudi Arabia
+79,2023-11-14,10,Dina Mahmoud,105,Monitor,Electronics,2,349.99,Morocco
+409,2024-09-10,3,Mohamed Saeed,107,Jeans,Clothing,1,49.99,Kuwait
+866,2024-12-04,6,Nour Ibrahim,112,Coffee Maker,Home,7,89.99,Saudi Arabia
+589,2023-11-25,7,Youssef Tarek,109,Backpack,Accessories,2,59.99,Jordan
+773,2023-08-15,3,Mohamed Saeed,107,Jeans,Clothing,9,49.99,UAE
+386,2023-06-02,6,Nour Ibrahim,113,Blender,Home,9,59.99,Kuwait
+998,2024-02-28,1,Ahmed Hassan,113,Blender,Home,,59.99,Saudi Arabia
+683,2023-01-26,9,Khaled Mostafa,111,Desk Lamp,Home,8,39.99,Morocco
+842,2024-02-04,6,Nour Ibrahim,105,Monitor,Electronics,2,349.99,Saudi Arabia
+205,2023-07-28,3,Mohamed Saeed,104,Keyboard,Electronics,2,79.99,Kuwait
+668,2023-03-14,14,Reem Nabil,115,Notebook Set,Stationery,2,9.99,Saudi Arabia
+88,2023-08-21,5,Omar Youssef,108,Sneakers,Clothing,4,89.99,Jordan
+530,2024-07-07,7,Youssef Tarek,101,Laptop,Electronics,8,999.99,UAE
+317,2024-12-09,1,Ahmed Hassan,102,Smartphone,Electronics,8,699.99,Morocco
+970,2023-08-18,4,Sara Khaled,105,Monitor,Electronics,6,349.99,Saudi Arabia
+454,2024-07-19,3,Mohamed Saeed,105,Monitor,Electronics,7,349.99,Kuwait
+767,2024-04-15,15,Amr Hesham,103,Headphones,Electronics,2,149.99,Morocco
+25,2023-04-07,8,Mona Adel,105,Monitor,Electronics,10,349.99,Morocco
+649,2024-10-29,6,Nour Ibrahim,104,Keyboard,Electronics,1,79.99,Kuwait
+274,2024-11-09,7,Youssef Tarek,113,Blender,Home,5,59.99,UAE
+200,2023-02-03,8,Mona Adel,109,Backpack,Accessories,4,59.99,Egypt
+439,2023-02-17,15,Amr Hesham,115,Notebook Set,Stationery,2,9.99,Jordan
+71,2024-08-05,2,Fatma Ali,113,Blender,Home,6,59.99,UAE
+718,2024-06-14,13,Tamer Gamal,102,Smartphone,Electronics,,699.99,UAE
+736,2023-03-06,7,Youssef Tarek,107,Jeans,Clothing,1,49.99,Morocco
+28,2023-08-15,10,Dina Mahmoud,102,Smartphone,Electronics,1,699.99,Egypt
+800,2023-02-09,8,Mona Adel,112,Coffee Maker,Home,10,89.99,Morocco
+36,2024-12-20,4,Sara Khaled,115,Notebook Set,Stationery,10,9.99,UAE
+567,2024-04-18,5,Omar Youssef,105,Monitor,Electronics,,349.99,Egypt
+14,2023-10-29,11,Ali Fawzy,103,Headphones,Electronics,8,149.99,Saudi Arabia
+632,2023-09-09,13,Tamer Gamal,108,Sneakers,Clothing,9,89.99,Morocco
+906,2023-06-19,8,Mona Adel,108,Sneakers,Clothing,5,89.99,Egypt
+847,2023-12-15,14,Reem Nabil,111,Desk Lamp,Home,6,39.99,UAE
+216,2023-11-14,6,Nour Ibrahim,107,Jeans,Clothing,10,49.99,Kuwait
+245,2024-03-04,13,Tamer Gamal,105,Monitor,Electronics,5,349.99,UAE
+714,2024-10-29,9,Khaled Mostafa,108,Sneakers,Clothing,1,89.99,Kuwait
+757,2024-06-04,14,Reem Nabil,115,Notebook Set,Stationery,1,9.99,Saudi Arabia
+136,2023-09-17,11,Ali Fawzy,103,Headphones,Electronics,2,149.99,UAE
+387,2023-09-05,10,Dina Mahmoud,113,Blender,Home,8,59.99,Saudi Arabia
+286,2024-04-25,3,Mohamed Saeed,103,Headphones,Electronics,10,149.99,Saudi Arabia
+490,2023-02-17,15,Amr Hesham,101,Laptop,Electronics,5,999.99,Saudi Arabia
+288,2024-04-02,15,Amr Hesham,105,Monitor,Electronics,4,349.99,Saudi Arabia
+828,2024-05-25,14,Reem Nabil,108,Sneakers,Clothing,10,89.99,UAE
+884,2024-12-03,6,,114,Novel Book,Books,5,14.99,Saudi Arabia
+601,2023-04-02,7,Youssef Tarek,113,Blender,Home,1,59.99,UAE
+876,2024-03-08,7,Youssef Tarek,115,Notebook Set,Stationery,7,9.99,Morocco
+371,2024-06-11,10,Dina Mahmoud,114,Novel Book,Books,1,14.99,Egypt
+703,2023-07-10,4,Sara Khaled,112,Coffee Maker,Home,7,89.99,Morocco
+945,2023-07-14,4,Sara Khaled,105,Monitor,Electronics,4,349.99,Morocco
+400,2024-09-16,3,Mohamed Saeed,106,T-Shirt,Clothing,1,29.99,UAE
+190,2023-03-19,9,Khaled Mostafa,109,Backpack,Accessories,6,59.99,Kuwait
+437,2024-02-21,5,Omar Youssef,112,Coffee Maker,Home,4,89.99,Egypt
+327,2024-07-12,15,Amr Hesham,108,Sneakers,Clothing,6,89.99,UAE
+319,2024-03-04,9,Khaled Mostafa,111,Desk Lamp,Home,10,39.99,Jordan
+821,2023-03-07,7,Youssef Tarek,104,Keyboard,Electronics,9,79.99,UAE
+791,2024-01-31,11,Ali Fawzy,107,Jeans,Clothing,5,49.99,Morocco
+122,2023-09-15,5,Omar Youssef,114,Novel Book,Books,3,14.99,Saudi Arabia
+494,2023-06-20,13,Tamer Gamal,112,Coffee Maker,Home,9,89.99,Morocco
+466,2023-07-06,7,Youssef Tarek,106,T-Shirt,Clothing,7,29.99,UAE
+176,2023-12-10,9,Khaled Mostafa,101,Laptop,Electronics,10,999.99,Kuwait
+89,2023-01-26,4,Sara Khaled,114,Novel Book,Books,9,14.99,Morocco
+396,2023-06-06,6,Nour Ibrahim,101,Laptop,Electronics,5,999.99,UAE
+640,2024-08-19,8,Mona Adel,115,Notebook Set,Stationery,7,9.99,Morocco
+91,2023-05-18,1,Ahmed Hassan,114,Novel Book,Books,2,14.99,Jordan
+368,2024-07-06,10,Dina Mahmoud,114,Novel Book,Books,8,14.99,Morocco
+399,2024-09-18,2,Fatma Ali,104,Keyboard,Electronics,10,79.99,Jordan
+270,2023-07-06,6,Nour Ibrahim,110,Watch,Accessories,4,199.99,UAE
+887,2024-06-16,10,Dina Mahmoud,110,Watch,Accessories,5,199.99,Morocco
+591,2024-04-18,10,Dina Mahmoud,112,Coffee Maker,Home,9,89.99,Kuwait
+723,2024-09-02,6,Nour Ibrahim,111,Desk Lamp,Home,5,39.99,Saudi Arabia
+265,2024-07-09,14,Reem Nabil,111,Desk Lamp,Home,9,39.99,Kuwait
+256,2023-01-16,14,Reem Nabil,112,Coffee Maker,Home,6,89.99,Jordan
+250,2024-12-13,13,Tamer Gamal,111,Desk Lamp,Home,5,39.99,Kuwait
+1,2023-11-23,3,Mohamed Saeed,105,Monitor,Electronics,10,349.99,Jordan
+913,2023-02-11,11,Ali Fawzy,101,Laptop,Electronics,4,999.99,UAE
+558,2023-03-16,3,Mohamed Saeed,107,Jeans,Clothing,5,49.99,Morocco
+647,2023-03-11,5,Omar Youssef,106,T-Shirt,Clothing,10,29.99,Morocco
+188,2023-07-17,10,Dina Mahmoud,107,Jeans,Clothing,7,49.99,Kuwait
+237,2024-08-16,12,Hana Sherif,105,Monitor,Electronics,7,349.99,UAE
+442,2024-07-06,15,Amr Hesham,108,Sneakers,Clothing,5,89.99,Egypt
+541,2024-11-27,12,Hana Sherif,107,Jeans,Clothing,4,49.99,Kuwait
+582,2023-12-03,13,Tamer Gamal,111,Desk Lamp,Home,5,39.99,Saudi Arabia
+719,2024-08-11,15,Amr Hesham,110,Watch,Accessories,10,199.99,Saudi Arabia
+158,2023-06-09,13,Tamer Gamal,114,Novel Book,Books,5,14.99,Jordan
+361,2023-11-12,10,Dina Mahmoud,110,Watch,Accessories,8,199.99,Egypt
+495,2024-01-24,2,Fatma Ali,113,Blender,Home,4,59.99,Morocco
+392,2024-11-08,14,Reem Nabil,106,T-Shirt,Clothing,3,29.99,Saudi Arabia
+818,2023-11-13,7,Youssef Tarek,112,Coffee Maker,Home,6,89.99,Kuwait
+772,2023-10-20,11,Ali Fawzy,106,T-Shirt,Clothing,6,29.99,UAE
+145,2023-11-04,12,Hana Sherif,105,Monitor,Electronics,7,349.99,Egypt
+284,2023-12-08,2,Fatma Ali,111,Desk Lamp,Home,4,39.99,Egypt
+737,2023-09-12,12,Hana Sherif,101,Laptop,Electronics,1,999.99,Kuwait
+873,2023-05-30,8,Mona Adel,113,Blender,Home,6,59.99,Egypt
+182,2024-07-14,5,Omar Youssef,114,Novel Book,Books,10,14.99,UAE
+706,2024-11-25,10,Dina Mahmoud,113,Blender,Home,4,59.99,Kuwait
+54,2024-06-12,11,Ali Fawzy,109,Backpack,Accessories,10,59.99,Saudi Arabia
+966,2023-09-26,1,Ahmed Hassan,107,Jeans,Clothing,1,49.99,UAE
+546,2023-10-06,1,Ahmed Hassan,115,Notebook Set,Stationery,5,9.99,Jordan
+408,2023-02-05,12,Hana Sherif,109,Backpack,Accessories,1,59.99,Kuwait
+235,2024-12-30,9,Khaled Mostafa,104,Keyboard,Electronics,3,79.99,Egypt
+628,2023-07-28,12,Hana Sherif,109,Backpack,Accessories,2,59.99,UAE
+356,2024-11-24,3,Mohamed Saeed,115,Notebook Set,Stationery,2,9.99,Jordan
+805,2023-11-01,15,Amr Hesham,102,Smartphone,Electronics,6,699.99,Saudi Arabia
+716,2023-12-17,4,Sara Khaled,105,Monitor,Electronics,7,349.99,Kuwait
+96,2024-03-21,12,Hana Sherif,108,Sneakers,Clothing,1,89.99,Jordan
+823,2024-02-08,15,Amr Hesham,101,Laptop,Electronics,4,999.99,Morocco
+500,2023-01-10,8,Mona Adel,115,Notebook Set,Stationery,5,9.99,Saudi Arabia
+815,2024-04-08,9,Khaled Mostafa,105,Monitor,Electronics,3,349.99,Morocco
+380,2024-05-15,5,Omar Youssef,105,Monitor,Electronics,3,349.99,Morocco
+687,2023-05-05,6,Nour Ibrahim,112,Coffee Maker,Home,4,89.99,Kuwait
+787,2024-07-22,7,Youssef Tarek,110,Watch,Accessories,1,199.99,Egypt
+848,2024-12-15,11,Ali Fawzy,115,Notebook Set,Stationery,9,9.99,Morocco
+633,2023-03-05,12,Hana Sherif,115,Notebook Set,Stationery,1,9.99,Saudi Arabia
+947,2023-11-28,2,Fatma Ali,113,Blender,Home,3,59.99,Egypt
+602,2023-01-25,5,Omar Youssef,111,Desk Lamp,Home,4,39.99,Jordan
+990,2023-12-15,7,Youssef Tarek,106,T-Shirt,Clothing,8,29.99,Jordan
+641,2023-04-23,13,Tamer Gamal,113,Blender,Home,6,59.99,Morocco
+258,2023-03-21,10,Dina Mahmoud,114,Novel Book,Books,3,14.99,Saudi Arabia
+930,2023-05-15,9,Khaled Mostafa,109,Backpack,Accessories,2,59.99,Morocco
+183,2024-12-03,2,Fatma Ali,114,Novel Book,Books,9,14.99,Saudi Arabia
+728,2024-09-06,15,Amr Hesham,111,Desk Lamp,Home,7,39.99,Saudi Arabia
+549,2024-11-11,11,Ali Fawzy,106,T-Shirt,Clothing,8,29.99,Jordan
+106,2024-07-04,14,Reem Nabil,110,Watch,Accessories,6,199.99,Kuwait
+518,2023-03-22,12,Hana Sherif,111,Desk Lamp,Home,5,39.99,Kuwait
+370,2024-10-01,7,Youssef Tarek,111,Desk Lamp,Home,7,39.99,Egypt
+175,2024-11-28,12,Hana Sherif,106,T-Shirt,Clothing,10,29.99,Egypt
+863,2023-06-27,9,Khaled Mostafa,105,Monitor,Electronics,5,349.99,Saudi Arabia
+540,2024-08-26,2,Fatma Ali,109,Backpack,Accessories,1,59.99,UAE
+663,2023-01-23,4,Sara Khaled,101,Laptop,Electronics,7,999.99,Saudi Arabia
+879,2024-04-28,14,Reem Nabil,103,Headphones,Electronics,6,149.99,Jordan
+843,2023-08-17,7,Youssef Tarek,114,Novel Book,Books,8,14.99,Saudi Arabia
+943,2024-01-02,12,Hana Sherif,107,Jeans,Clothing,10,49.99,Morocco
+528,2024-08-09,15,Amr Hesham,106,T-Shirt,Clothing,10,29.99,Egypt
+733,2024-12-06,2,Fatma Ali,109,Backpack,Accessories,3,59.99,Morocco
+963,2023-09-18,13,Tamer Gamal,101,Laptop,Electronics,2,999.99,Morocco
+611,2023-01-20,4,Sara Khaled,111,Desk Lamp,Home,6,39.99,UAE
+345,2023-04-30,8,Mona Adel,109,Backpack,Accessories,8,59.99,Egypt
+422,2023-12-28,1,Ahmed Hassan,102,Smartphone,Electronics,1,699.99,Saudi Arabia
+748,2023-01-04,7,Youssef Tarek,101,Laptop,Electronics,9,999.99,Morocco
+481,2023-04-27,13,Tamer Gamal,103,Headphones,Electronics,9,149.99,UAE
+447,2023-08-01,3,Mohamed Saeed,103,Headphones,Electronics,8,149.99,Saudi Arabia
+449,2023-04-12,10,Dina Mahmoud,104,Keyboard,Electronics,6,79.99,Saudi Arabia
+341,2023-11-25,14,Reem Nabil,107,Jeans,Clothing,1,49.99,Saudi Arabia
+802,2024-06-08,6,Nour Ibrahim,105,Monitor,Electronics,3,349.99,Kuwait
+699,2023-01-09,7,Youssef Tarek,109,Backpack,Accessories,9,59.99,Kuwait
+428,2023-04-10,5,Omar Youssef,114,Novel Book,Books,4,14.99,Saudi Arabia
+52,2024-10-25,2,Fatma Ali,110,Watch,Accessories,1,199.99,Kuwait
+592,2024-12-20,3,Mohamed Saeed,103,Headphones,Electronics,3,149.99,UAE
+58,2023-01-27,8,Mona Adel,114,Novel Book,Books,2,14.99,Saudi Arabia
+535,2023-03-27,13,Tamer Gamal,106,T-Shirt,Clothing,1,29.99,UAE
+127,2024-04-24,14,Reem Nabil,108,Sneakers,Clothing,5,89.99,Morocco
+65,2023-09-17,8,Mona Adel,115,Notebook Set,Stationery,7,9.99,UAE
+153,2024-11-22,8,Mona Adel,113,Blender,Home,4,59.99,Kuwait
+400,2024-09-16,3,Mohamed Saeed,106,T-Shirt,Clothing,1,29.99,UAE
+881,2023-05-25,15,Amr Hesham,112,Coffee Maker,Home,7,89.99,UAE
+47,2024-10-21,12,Hana Sherif,111,Desk Lamp,Home,10,39.99,Morocco
+17,2024-04-02,11,Ali Fawzy,107,Jeans,,,49.99,Saudi Arabia
+504,2023-12-06,5,Omar Youssef,114,Novel Book,Books,1,14.99,Saudi Arabia
+600,2024-08-05,15,Amr Hesham,101,Laptop,Electronics,2,999.99,Jordan
+80,2024-05-04,13,Tamer Gamal,113,Blender,Home,5,59.99,Kuwait
+156,2023-12-04,9,Khaled Mostafa,104,Keyboard,Electronics,7,79.99,Egypt
+366,2023-06-11,7,Youssef Tarek,104,Keyboard,Electronics,6,79.99,UAE
+16,2024-09-28,10,Dina Mahmoud,102,Smartphone,Electronics,3,699.99,Morocco
+390,2023-12-08,3,Mohamed Saeed,105,Monitor,Electronics,2,349.99,Egypt
+759,2023-11-05,4,Sara Khaled,113,Blender,Home,8,59.99,Saudi Arabia
+788,2023-09-15,6,Nour Ibrahim,101,Laptop,Electronics,2,999.99,UAE
+232,2023-09-14,7,Youssef Tarek,108,Sneakers,Clothing,3,89.99,UAE
+468,2024-07-17,7,Youssef Tarek,109,Backpack,Accessories,8,59.99,Egypt
+613,2024-11-27,4,Sara Khaled,113,Blender,Home,5,59.99,Jordan
+811,2024-07-18,15,Amr Hesham,103,Headphones,Electronics,10,149.99,Egypt
+344,2023-09-05,13,,105,Monitor,Electronics,1,349.99,Morocco
+724,2023-02-27,2,Fatma Ali,110,Watch,Accessories,10,199.99,Egypt
+265,2024-07-09,14,Reem Nabil,111,Desk Lamp,Home,9,39.99,Kuwait
+78,2024-07-29,5,Omar Youssef,105,Monitor,Electronics,2,349.99,Egypt
+279,2023-02-10,7,Youssef Tarek,108,Sneakers,Clothing,6,89.99,Kuwait
+555,2023-03-10,9,Khaled Mostafa,107,Jeans,Clothing,4,49.99,Saudi Arabia
+915,2023-05-25,1,Ahmed Hassan,115,Notebook Set,Stationery,8,9.99,Morocco
+533,2023-10-01,3,Mohamed Saeed,108,Sneakers,Clothing,9,89.99,Saudi Arabia
+944,2024-06-12,14,Reem Nabil,109,Backpack,Accessories,5,59.99,UAE
