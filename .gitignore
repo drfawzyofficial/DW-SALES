@@ -26,3 +26,6 @@ Thumbs.db
 
 # Environment
 .env
+
+# Deploy script
+push-to-github.sh
