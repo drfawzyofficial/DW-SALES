@@ -1,35 +1,122 @@
 # Sales Data Warehouse — ETL Pipeline & Dashboard
 
-A full-stack Data Warehouse project featuring a Python ETL pipeline, PostgreSQL star schema, Flask REST API, and an interactive React dashboard built with Vite.
+A full-stack Data Warehouse project featuring a Python ETL pipeline, PostgreSQL **Star + Snowflake** schemas, Flask REST API, and an interactive React dashboard built with Vite.
 
 ## Architecture
 
 ```
-CSV File ──→ Extract ──→ Transform ──→ Load ──→ PostgreSQL (Star Schema)
-                                                     │
-                                             ┌───────┼───────┐
-                                             ▼       ▼       ▼
-                                        dim_date  dim_     dim_
-                                                 customers products
-                                             └───────┼───────┘
-                                                     ▼
-                                               fact_sales
-                                                     │
-                                                     ▼
-                                              Flask REST API
-                                                     │
-                                                     ▼
-                                           React Dashboard (Vite)
+CSV File ──→ Extract ──→ Transform ──→ Load ──→ PostgreSQL
+                                                    │
+                                         ┌──────────┴──────────┐
+                                         ▼                     ▼
+                                   ⭐ Star Schema        ❄️ Snowflake Schema
+                                   (denormalized)         (normalized dims)
+                                         │                     │
+                                         └──────────┬──────────┘
+                                                    ▼
+                                             Flask REST API
+                                                    │
+                                                    ▼
+                                          React Dashboard (Vite)
 ```
 
 ## Star Schema
 
-| Table          | Type      | Description                          |
-|----------------|-----------|--------------------------------------|
-| `fact_sales`   | Fact      | Order-level sales transactions       |
-| `dim_customers`| Dimension | Customer info (name, country)        |
-| `dim_products` | Dimension | Product info (name, category, price) |
-| `dim_date`     | Dimension | Date breakdown (year, month, quarter)|
+The **Star Schema** keeps all descriptive attributes directly inside each dimension table. This makes queries simpler (fewer JOINs) but stores redundant data.
+
+| Table          | Type      | Description                           |
+|----------------|-----------|---------------------------------------|
+| `fact_sales`   | Fact      | Order-level sales transactions        |
+| `dim_customers`| Dimension | Customer info (name, **country**)     |
+| `dim_products` | Dimension | Product info (name, **category**, price) |
+| `dim_date`     | Dimension | Date breakdown (year, month, quarter) |
+
+```
+               ┌───────────────┐
+               │  dim_customers│
+               │───────────────│
+               │ customer_id   │◄──┐
+               │ customer_name │   │
+               │ country       │   │
+               └───────────────┘   │
+                                   │
+┌───────────────┐   ┌──────────────┴──────┐   ┌───────────────┐
+│   dim_date    │   │     fact_sales      │   │  dim_products │
+│───────────────│   │─────────────────────│   │───────────────│
+│ date_id       │◄──│ order_id            │──►│ product_id    │
+│ full_date     │   │ date_id        (FK) │   │ product_name  │
+│ year          │   │ customer_id    (FK) │   │ category      │
+│ month         │   │ product_id     (FK) │   │ price         │
+│ day           │   │ quantity            │   └───────────────┘
+│ quarter       │   │ price               │
+│ day_of_week   │   │ total_amount        │
+└───────────────┘   └─────────────────────┘
+```
+
+## Snowflake Schema
+
+The **Snowflake Schema** further normalizes dimension tables by extracting repeated attributes (like `country` and `category`) into their own **sub-dimension** tables. This reduces data redundancy but requires extra JOINs for queries.
+
+| Table              | Type          | Description                                       |
+|--------------------|---------------|---------------------------------------------------|
+| `fact_sales_sf`    | Fact          | Order-level sales transactions (same structure)   |
+| `dim_customers_sf` | Dimension     | Customer info (name, **country_id** FK)           |
+| `dim_products_sf`  | Dimension     | Product info (name, **category_id** FK, price)    |
+| `dim_date`         | Dimension     | Date breakdown — shared with star schema          |
+| `dim_countries`    | Sub-Dimension | Normalized country lookup (extracted from customers) |
+| `dim_categories`   | Sub-Dimension | Normalized category lookup (extracted from products) |
+
+```
+┌───────────────┐   ┌─────────────────┐
+│ dim_countries │   │ dim_customers_sf│
+│───────────────│   │─────────────────│
+│ country_id    │◄──│ customer_id     │◄──┐
+│ country_name  │   │ customer_name   │   │
+└───────────────┘   │ country_id (FK) │   │
+                    └─────────────────┘   │
+                                          │
+┌───────────────┐   ┌─────────────────────┤   ┌─────────────────┐   ┌────────────────┐
+│   dim_date    │   │    fact_sales_sf     │   │ dim_products_sf │   │ dim_categories │
+│───────────────│   │─────────────────────│   │─────────────────│   │────────────────│
+│ date_id       │◄──│ order_id            │──►│ product_id      │──►│ category_id    │
+│ full_date     │   │ date_id        (FK) │   │ product_name    │   │ category_name  │
+│ year          │   │ customer_id    (FK) │   │ category_id (FK)│   └────────────────┘
+│ month         │   │ product_id     (FK) │   │ price           │
+│ day           │   │ quantity            │   └─────────────────┘
+│ quarter       │   │ price               │
+│ day_of_week   │   │ total_amount        │
+└───────────────┘   └─────────────────────┘
+```
+
+## Star vs Snowflake — Key Differences
+
+| Aspect            | ⭐ Star Schema                       | ❄️ Snowflake Schema                        |
+|-------------------|--------------------------------------|---------------------------------------------|
+| **Normalization** | Denormalized dimensions              | Normalized dimensions (sub-dimensions)      |
+| **JOINs needed**  | Fewer (simpler queries)              | More (extra JOINs to sub-dimensions)        |
+| **Redundancy**    | Higher (e.g., "USA" stored per row)  | Lower (country stored once in lookup table) |
+| **Query speed**   | Faster (fewer JOINs)                 | Slower (more JOINs)                         |
+| **Storage**       | More disk space                      | Less disk space                             |
+| **Maintenance**   | Easier to understand                 | Better data integrity                       |
+
+### Example: Sales by Country
+
+**Star Schema** (1 JOIN):
+```sql
+SELECT c.country, SUM(f.total_amount) AS revenue
+FROM fact_sales f
+JOIN dim_customers c ON f.customer_id = c.customer_id
+GROUP BY c.country;
+```
+
+**Snowflake Schema** (2 JOINs):
+```sql
+SELECT co.country_name AS country, SUM(f.total_amount) AS revenue
+FROM fact_sales_sf f
+JOIN dim_customers_sf c ON f.customer_id = c.customer_id
+JOIN dim_countries co   ON c.country_id  = co.country_id  -- extra JOIN
+GROUP BY co.country_name;
+```
 
 ## Project Structure
 
@@ -39,7 +126,7 @@ DW/
 ├── etl_pipeline.py        # Main ETL pipeline (Extract → Transform → Load)
 ├── api.py                 # Flask REST API serving analytics data
 ├── run_queries.py         # Runs analytics queries and prints results
-├── queries.sql            # Raw SQL queries for reference
+├── queries.sql            # Star + Snowflake SQL queries for reference
 ├── requirements.txt       # Python dependencies
 ├── data/
 │   └── sales_data.csv     # Sample dataset
@@ -85,6 +172,7 @@ DATABASE_URL = "postgresql://your_user:your_password@localhost:5432/sales_dw"
 ```bash
 python etl_pipeline.py
 ```
+This creates **both** the Star Schema and Snowflake Schema tables, and loads data into all of them.
 
 ### 5. Start the Flask API
 ```bash
@@ -124,7 +212,7 @@ python run_queries.py
 - **pandas** — Data manipulation and transformation
 - **SQLAlchemy** — ORM and database connection
 - **psycopg2** — PostgreSQL adapter
-- **PostgreSQL** — Data warehouse storage
+- **PostgreSQL** — Data warehouse storage (Star + Snowflake schemas)
 - **Flask** — REST API backend
 - **Flask-CORS** — Cross-origin resource sharing
 - **React 19** — Frontend UI library
