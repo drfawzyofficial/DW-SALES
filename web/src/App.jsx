@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Overview from './components/Overview'
 import StarSchema from './components/StarSchema'
+import SnowflakeSchema from './components/SnowflakeSchema'
 import ETLPipeline from './components/ETLPipeline'
 import Dashboard from './components/Dashboard'
 import TableExplorer from './components/TableExplorer'
@@ -10,6 +11,7 @@ import TableExplorer from './components/TableExplorer'
 const TABS = [
   { id: 'overview', label: 'Overview', icon: '🏠' },
   { id: 'schema', label: 'Star Schema', icon: '⭐' },
+  { id: 'snowflake', label: 'Snowflake Schema', icon: '❄️' },
   { id: 'etl', label: 'ETL Pipeline', icon: '⚙️' },
   { id: 'dashboard', label: 'Analytics', icon: '📊' },
   { id: 'tables', label: 'Data Explorer', icon: '🗄️' },
@@ -22,6 +24,7 @@ function App() {
     switch (activeTab) {
       case 'overview': return <Overview onNavigate={setActiveTab} />
       case 'schema': return <StarSchema />
+      case 'snowflake': return <SnowflakeSchema />
       case 'etl': return <ETLPipeline />
       case 'dashboard': return <Dashboard />
       case 'tables': return <TableExplorer />

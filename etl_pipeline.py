@@ -170,13 +170,76 @@ def transform_data(df: pd.DataFrame) -> dict:
     })
     logger.info("   fact_sales: %d rows", len(fact_sales))
 
-    logger.info("✅ TRANSFORM — Complete")
+    # ══════════════════════════════════════════════════════════════════════
+    # SNOWFLAKE SCHEMA TABLES
+    # ══════════════════════════════════════════════════════════════════════
+    # In a Snowflake Schema, dimension tables are further normalized.
+    # Instead of storing category directly in dim_products, we extract it
+    # into a separate dim_categories table. Similarly, country is extracted
+    # from dim_customers into dim_countries.
+    #
+    # Why? This reduces data redundancy in dimension tables.
+    # Trade-off: Queries need more JOINs (slower) but storage is optimized.
+    # ──────────────────────────────────────────────────────────────────────
+
+    logger.info("❄️  SNOWFLAKE — Normalizing dimension tables further...")
+
+    # --- dim_categories (sub-dimension extracted from dim_products) ---
+    # Each unique category gets its own ID.
+    categories = dim_products["category"].drop_duplicates().sort_values().reset_index(drop=True)
+    dim_categories = pd.DataFrame({
+        "category_id": range(1, len(categories) + 1),
+        "category_name": categories,
+    })
+    logger.info("   dim_categories: %d rows", len(dim_categories))
+
+    # --- dim_countries (sub-dimension extracted from dim_customers) ---
+    # Each unique country gets its own ID.
+    countries = dim_customers["country"].drop_duplicates().sort_values().reset_index(drop=True)
+    dim_countries = pd.DataFrame({
+        "country_id": range(1, len(countries) + 1),
+        "country_name": countries,
+    })
+    logger.info("   dim_countries: %d rows", len(dim_countries))
+
+    # --- dim_products_sf (snowflake version — category replaced with FK) ---
+    # Instead of storing the category string, we store a category_id
+    # that references the dim_categories table.
+    cat_name_to_id = dict(zip(dim_categories["category_name"], dim_categories["category_id"]))
+    dim_products_sf = dim_products.copy()
+    dim_products_sf["category_id"] = dim_products_sf["category"].map(cat_name_to_id)
+    dim_products_sf = dim_products_sf[["product_id", "product_name", "category_id", "price"]]
+    logger.info("   dim_products_sf: %d rows (category → category_id FK)", len(dim_products_sf))
+
+    # --- dim_customers_sf (snowflake version — country replaced with FK) ---
+    # Instead of storing the country string, we store a country_id
+    # that references the dim_countries table.
+    country_name_to_id = dict(zip(dim_countries["country_name"], dim_countries["country_id"]))
+    dim_customers_sf = dim_customers.copy()
+    dim_customers_sf["country_id"] = dim_customers_sf["country"].map(country_name_to_id)
+    dim_customers_sf = dim_customers_sf[["customer_id", "customer_name", "country_id"]]
+    logger.info("   dim_customers_sf: %d rows (country → country_id FK)", len(dim_customers_sf))
+
+    # --- fact_sales_sf (identical to star schema fact table) ---
+    # The fact table stays the same in snowflake schema.
+    # The normalization only affects dimension tables.
+    fact_sales_sf = fact_sales.copy()
+    logger.info("   fact_sales_sf: %d rows (same as star schema)", len(fact_sales_sf))
+
+    logger.info("✅ TRANSFORM — Complete (Star + Snowflake)")
 
     return {
+        # Star schema tables
         "dim_customers": dim_customers,
         "dim_products": dim_products,
         "dim_date": dim_date,
         "fact_sales": fact_sales,
+        # Snowflake schema tables
+        "dim_categories": dim_categories,
+        "dim_countries": dim_countries,
+        "dim_products_sf": dim_products_sf,
+        "dim_customers_sf": dim_customers_sf,
+        "fact_sales_sf": fact_sales_sf,
     }
 
 
@@ -197,6 +260,10 @@ def create_tables(engine):
     logger.info("🗄️  CREATE TABLES — Defining schema...")
 
     metadata = MetaData()
+
+    # ══════════════════════════════════════════════════════════════════════
+    # STAR SCHEMA TABLES
+    # ══════════════════════════════════════════════════════════════════════
 
     # ── Dimension: Customers ───────────────────────────────────────────────
     dim_customers = Table(
@@ -239,29 +306,81 @@ def create_tables(engine):
         Column("total_amount", Float, nullable=False),
     )
 
+    # ══════════════════════════════════════════════════════════════════════
+    # SNOWFLAKE SCHEMA TABLES
+    # ══════════════════════════════════════════════════════════════════════
+    # These tables demonstrate further normalization of dimension tables.
+    # Sub-dimensions (dim_categories, dim_countries) are extracted.
+    # ──────────────────────────────────────────────────────────────────────
+
+    # ── Sub-Dimension: Categories (extracted from dim_products) ────────────
+    dim_categories = Table(
+        "dim_categories", metadata,
+        Column("category_id", Integer, primary_key=True),
+        Column("category_name", String(50), nullable=False, unique=True),
+    )
+
+    # ── Sub-Dimension: Countries (extracted from dim_customers) ────────────
+    dim_countries = Table(
+        "dim_countries", metadata,
+        Column("country_id", Integer, primary_key=True),
+        Column("country_name", String(50), nullable=False, unique=True),
+    )
+
+    # ── Dimension: Products (Snowflake — references dim_categories) ────────
+    dim_products_sf = Table(
+        "dim_products_sf", metadata,
+        Column("product_id", Integer, primary_key=True),
+        Column("product_name", String(100), nullable=False),
+        Column("category_id", Integer, ForeignKey("dim_categories.category_id"), nullable=False),
+        Column("price", Float, nullable=False),
+    )
+
+    # ── Dimension: Customers (Snowflake — references dim_countries) ────────
+    dim_customers_sf = Table(
+        "dim_customers_sf", metadata,
+        Column("customer_id", Integer, primary_key=True),
+        Column("customer_name", String(100), nullable=False),
+        Column("country_id", Integer, ForeignKey("dim_countries.country_id"), nullable=False),
+    )
+
+    # ── Fact: Sales (Snowflake — same structure, references SF dimensions) ─
+    fact_sales_sf = Table(
+        "fact_sales_sf", metadata,
+        Column("order_id", Integer, primary_key=True),
+        Column("date_id", Integer, ForeignKey("dim_date.date_id"), nullable=False),
+        Column("customer_id", Integer, ForeignKey("dim_customers_sf.customer_id"), nullable=False),
+        Column("product_id", Integer, ForeignKey("dim_products_sf.product_id"), nullable=False),
+        Column("quantity", Integer, nullable=False),
+        Column("price", Float, nullable=False),
+        Column("total_amount", Float, nullable=False),
+    )
+
     # ── Drop existing tables (reverse dependency order) & recreate ─────────
     metadata.drop_all(engine, checkfirst=True)
     metadata.create_all(engine)
-    logger.info("   Created tables: dim_customers, dim_products, dim_date, fact_sales")
+    logger.info("   Created star schema tables: dim_customers, dim_products, dim_date, fact_sales")
+    logger.info("   Created snowflake tables: dim_categories, dim_countries, dim_products_sf, dim_customers_sf, fact_sales_sf")
 
     # ── Create indexes for query performance ───────────────────────────────
     logger.info("   Creating indexes...")
     with engine.begin() as conn:
-        # Indexes on fact_sales foreign keys (speeds up JOINs)
+        # Star schema indexes
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_date_id ON fact_sales (date_id)"))
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_customer_id ON fact_sales (customer_id)"))
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_product_id ON fact_sales (product_id)"))
-
-        # Index on dim_date for time-based filtering
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_dim_date_year_month ON dim_date (year, month)"))
-
-        # Index on dim_customers for country-based grouping
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_dim_customers_country ON dim_customers (country)"))
-
-        # Index on dim_products for category-based grouping
         conn.execute(text("CREATE INDEX IF NOT EXISTS idx_dim_products_category ON dim_products (category)"))
 
-    logger.info("✅ CREATE TABLES — Complete (with indexes)")
+        # Snowflake schema indexes
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_sf_date_id ON fact_sales_sf (date_id)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_sf_customer_id ON fact_sales_sf (customer_id)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_fact_sales_sf_product_id ON fact_sales_sf (product_id)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_dim_products_sf_category_id ON dim_products_sf (category_id)"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_dim_customers_sf_country_id ON dim_customers_sf (country_id)"))
+
+    logger.info("✅ CREATE TABLES — Complete (Star + Snowflake with indexes)")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -281,11 +400,19 @@ def load_data(engine, tables: dict):
     logger.info("📤 LOAD — Inserting data into PostgreSQL...")
 
     # ── Load order: dimensions first, then facts ───────────────────────────
+    # Parent tables must be loaded before child tables (foreign key deps).
     load_order = [
+        # Star schema tables
         ("dim_customers", tables["dim_customers"]),
         ("dim_products", tables["dim_products"]),
         ("dim_date", tables["dim_date"]),
         ("fact_sales", tables["fact_sales"]),
+        # Snowflake schema tables — sub-dimensions first, then dims, then fact
+        ("dim_categories", tables["dim_categories"]),
+        ("dim_countries", tables["dim_countries"]),
+        ("dim_products_sf", tables["dim_products_sf"]),
+        ("dim_customers_sf", tables["dim_customers_sf"]),
+        ("fact_sales_sf", tables["fact_sales_sf"]),
     ]
 
     for table_name, df in load_order:
@@ -298,7 +425,7 @@ def load_data(engine, tables: dict):
         )
         logger.info("   ✔ %s — %d rows loaded", table_name, len(df))
 
-    logger.info("✅ LOAD — Complete")
+    logger.info("✅ LOAD — Complete (Star + Snowflake)")
 
 
 # ══════════════════════════════════════════════════════════════════════════════

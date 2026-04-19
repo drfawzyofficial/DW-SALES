@@ -9,7 +9,7 @@ function Header() {
             <span className="logo-icon">🏗️</span>
             <div>
               <h1 className="logo-text">Sales Data Warehouse</h1>
-              <p className="logo-sub">Educational Dashboard — Star Schema &amp; ETL Pipeline</p>
+              <p className="logo-sub">Educational Dashboard — Star Schema, Snowflake Schema &amp; ETL Pipeline</p>
             </div>
           </div>
         </div>

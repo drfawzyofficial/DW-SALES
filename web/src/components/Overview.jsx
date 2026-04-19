@@ -10,6 +10,13 @@ function Overview({ onNavigate }) {
       color: 'blue',
     },
     {
+      icon: '❄️',
+      title: 'Snowflake Schema',
+      desc: 'Explore the normalized version of star schema — with sub-dimension tables and SQL comparison.',
+      tab: 'snowflake',
+      color: 'cyan',
+    },
+    {
       icon: '⚙️',
       title: 'ETL Pipeline',
       desc: 'Extract data from CSV, Transform it (clean, enrich, normalize), and Load into PostgreSQL.',
@@ -54,9 +61,9 @@ function Overview({ onNavigate }) {
             <span className="gradient-text">Data Warehouse</span> Project
           </h1>
           <p className="hero-desc">
-            A complete, production-like data warehouse built from scratch. Learn how to design a
-            star schema, write an ETL pipeline in Python, load data into PostgreSQL, and run
-            analytical SQL queries — all visualized in this interactive dashboard.
+            A complete, production-like data warehouse built from scratch. Learn how to design
+            both <strong>Star Schema</strong> and <strong>Snowflake Schema</strong>, write an ETL pipeline in Python,
+            load data into PostgreSQL, and run analytical SQL queries — all visualized in this interactive dashboard.
           </p>
           <div className="hero-stats">
             <div className="stat-item">
@@ -65,7 +72,7 @@ function Overview({ onNavigate }) {
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
-              <span className="stat-value">4</span>
+              <span className="stat-value">9</span>
               <span className="stat-label">Tables</span>
             </div>
             <div className="stat-divider" />
