@@ -17,6 +17,13 @@ function Overview({ onNavigate }) {
       color: 'cyan',
     },
     {
+      icon: '🌌',
+      title: 'Galaxy Schema',
+      desc: 'Discover the Fact Constellation pattern — multiple fact tables sharing dimensions for cross-process analysis.',
+      tab: 'galaxy',
+      color: 'indigo',
+    },
+    {
       icon: '⚙️',
       title: 'ETL Pipeline',
       desc: 'Extract data from CSV, Transform it (clean, enrich, normalize), and Load into PostgreSQL.',
@@ -62,8 +69,9 @@ function Overview({ onNavigate }) {
           </h1>
           <p className="hero-desc">
             A complete, production-like data warehouse built from scratch. Learn how to design
-            both <strong>Star Schema</strong> and <strong>Snowflake Schema</strong>, write an ETL pipeline in Python,
-            load data into PostgreSQL, and run analytical SQL queries — all visualized in this interactive dashboard.
+            <strong>Star Schema</strong>, <strong>Snowflake Schema</strong>, and <strong>Galaxy Schema</strong> (Fact Constellation),
+            write an ETL pipeline in Python, load data into PostgreSQL, and run analytical SQL queries —
+            all visualized in this interactive dashboard.
           </p>
           <div className="hero-stats">
             <div className="stat-item">
@@ -72,7 +80,7 @@ function Overview({ onNavigate }) {
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
-              <span className="stat-value">9</span>
+              <span className="stat-value">12</span>
               <span className="stat-label">Tables</span>
             </div>
             <div className="stat-divider" />

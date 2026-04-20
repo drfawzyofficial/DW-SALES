@@ -120,6 +120,7 @@
 .detail-emerald { border-left: 3px solid var(--accent-emerald); }
 .detail-purple { border-left: 3px solid var(--accent-purple); }
 .detail-amber { border-left: 3px solid var(--accent-amber); }
+.detail-indigo { border-left: 3px solid var(--accent-indigo); }
 
 .detail-header {
   margin-bottom: 20px;

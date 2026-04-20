@@ -1,0 +1,748 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   GALAXY SCHEMA — Component Styles
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.galaxy-schema {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ── Schema Diagram ──────────────────────────────────────────────────── */
+.galaxy-diagram {
+  margin-bottom: 36px;
+}
+
+.galaxy-diagram-inner {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+/* ── SVG connection lines ─────────────────────────────────────────────── */
+.gx-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gx-shared-conn {
+  stroke: var(--accent-indigo);
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  opacity: 0.4;
+}
+
+.gx-unique-conn {
+  stroke: var(--accent-rose);
+  stroke-width: 2.5;
+  stroke-dasharray: 8 4;
+  opacity: 0.6;
+  animation: dash-flow-galaxy 2s linear infinite;
+}
+
+@keyframes dash-flow-galaxy {
+  to { stroke-dashoffset: -24; }
+}
+
+/* ── Schema nodes (shared base) ──────────────────────────────────────── */
+.gx-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  z-index: 1;
+  min-width: 130px;
+}
+
+.gx-node:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.gx-node.selected {
+  border-color: var(--accent-indigo);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.3);
+}
+
+.gx-node .node-icon {
+  font-size: 1.5rem;
+}
+
+.gx-node .node-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.gx-node .node-badge {
+  font-size: 0.6rem;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ── Shared dimension nodes (top row) ─────────────────────────────────── */
+.gx-dim-node {
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.gx-dim-left {
+  left: 2%;
+  top: 8%;
+}
+
+.gx-dim-center {
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+}
+
+.gx-dim-center.selected { transform: translateX(-50%) scale(1.05); }
+
+.gx-dim-right {
+  right: 2%;
+  top: 8%;
+}
+
+.shared-badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-indigo);
+}
+
+/* ── Fact table nodes (middle row) ────────────────────────────────────── */
+.gx-fact-node {
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulse-glow-galaxy 3s ease-in-out infinite;
+  min-width: 160px;
+}
+
+.gx-fact-left {
+  left: 12%;
+  border-color: rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.05));
+}
+
+.gx-fact-right {
+  right: 12%;
+  border-color: rgba(244, 63, 94, 0.3);
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.08), rgba(244, 63, 94, 0.03));
+}
+
+.gx-fact-left.selected {
+  transform: translateY(-50%) scale(1.05);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+}
+
+.gx-fact-right.selected {
+  transform: translateY(-50%) scale(1.05);
+  border-color: var(--accent-rose);
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.3);
+}
+
+@keyframes pulse-glow-galaxy {
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.15); }
+  50% { box-shadow: 0 0 35px rgba(99, 102, 241, 0.25); }
+}
+
+.fact-badge {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--accent-blue);
+}
+
+.return-badge {
+  background: rgba(244, 63, 94, 0.15);
+  color: var(--accent-rose);
+}
+
+/* ── Unique dimension node (bottom) ───────────────────────────────────── */
+.gx-unique-node {
+  border-color: rgba(6, 182, 212, 0.3);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(6, 182, 212, 0.02));
+}
+
+.gx-unique-bottom {
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+}
+
+.gx-unique-bottom.selected {
+  transform: translateX(-50%) scale(1.05);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+}
+
+.unique-badge {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--accent-cyan);
+}
+
+/* ── Diagram legend ───────────────────────────────────────────────────── */
+.galaxy-schema .diagram-legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 12px;
+}
+
+.galaxy-schema .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.galaxy-schema .legend-line {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.shared-legend {
+  background: var(--accent-indigo);
+  opacity: 0.5;
+}
+
+.unique-legend {
+  background: var(--accent-rose);
+  animation: pulse-opacity 2s ease-in-out infinite;
+}
+
+/* ── Table Detail — reuse star/snowflake styles with added colors ─────── */
+.galaxy-schema .table-detail {
+  margin-bottom: 32px;
+}
+
+.detail-rose { border-left: 3px solid var(--accent-rose); }
+.detail-indigo { border-left: 3px solid var(--accent-indigo); }
+
+/* ── Analytics Section ───────────────────────────────────────────────── */
+.galaxy-analytics-section {
+  margin-bottom: 36px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.analytics-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.analytics-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.analytics-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.analytics-table-wrap {
+  overflow-x: auto;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.analytics-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.analytics-table td {
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.05);
+}
+
+.analytics-table tr {
+  animation: slide-right 0.3s ease-out both;
+}
+
+.analytics-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.category-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.revenue-cell {
+  color: var(--accent-emerald);
+  font-weight: 600;
+}
+
+.refund-cell {
+  color: var(--accent-rose);
+  font-weight: 600;
+}
+
+.net-cell {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.return-rate-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(244, 63, 94, 0.12);
+  color: var(--accent-rose);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ── Return Reason List ──────────────────────────────────────────────── */
+.reason-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reason-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slide-right 0.3s ease-out both;
+}
+
+.reason-info {
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.reason-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reason-count {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.reason-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: rgba(148, 163, 184, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.reason-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-rose), var(--accent-purple));
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+
+.reason-refund {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-rose);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ── Triple Comparison ───────────────────────────────────────────────── */
+.comparison-section {
+  margin-bottom: 36px;
+}
+
+.triple-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.galaxy-schema .metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.galaxy-schema .metric-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.galaxy-schema .star-metric {
+  border-top: 3px solid var(--accent-amber);
+}
+
+.galaxy-schema .snowflake-metric {
+  border-top: 3px solid var(--accent-cyan);
+}
+
+.galaxy-metric {
+  border-top: 3px solid var(--accent-indigo);
+}
+
+.galaxy-schema .metric-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.galaxy-schema .metric-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.galaxy-schema .metric-icon {
+  font-size: 1.5rem;
+}
+
+.galaxy-schema .metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.galaxy-schema .metric-item {
+  text-align: center;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+}
+
+.galaxy-schema .metric-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.galaxy-schema .metric-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ── SQL Section ─────────────────────────────────────────────────────── */
+.sql-section {
+  margin-bottom: 36px;
+}
+
+.galaxy-schema .query-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.galaxy-schema .query-tab {
+  padding: 10px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.galaxy-schema .query-tab:hover {
+  border-color: var(--border-glow);
+  color: var(--text-primary);
+}
+
+.galaxy-schema .query-tab.active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--accent-indigo);
+  color: var(--accent-indigo);
+}
+
+.sql-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.sql-card:hover {
+  border-color: var(--border-glow);
+}
+
+.galaxy-sql {
+  border-top: 3px solid var(--accent-indigo);
+}
+
+.sql-card-header {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.sql-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.galaxy-schema .sql-block {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.galaxy-schema .sql-block code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-indigo);
+  line-height: 1.7;
+}
+
+.galaxy-schema .sql-explanation {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 10px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-indigo);
+}
+
+/* ── Pros & Cons Section ─────────────────────────────────────────────── */
+.galaxy-schema .proscons-section {
+  margin-bottom: 36px;
+}
+
+.triple-proscons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.galaxy-schema .proscons-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.galaxy-schema .proscons-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.galaxy-schema .star-proscons {
+  border-top: 3px solid var(--accent-amber);
+}
+
+.galaxy-schema .snowflake-proscons {
+  border-top: 3px solid var(--accent-cyan);
+}
+
+.galaxy-proscons {
+  border-top: 3px solid var(--accent-indigo);
+}
+
+.galaxy-schema .proscons-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.galaxy-schema .pros,
+.galaxy-schema .cons,
+.galaxy-schema .usecase {
+  margin-bottom: 14px;
+}
+
+.galaxy-schema .pros-title {
+  color: var(--accent-emerald);
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+.galaxy-schema .cons-title {
+  color: var(--accent-rose);
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+.galaxy-schema .proscons-card h5 {
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+  color: var(--accent-amber);
+}
+
+.galaxy-schema .proscons-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.galaxy-schema .proscons-card li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 3px 0 3px 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.galaxy-schema .proscons-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.galaxy-schema .proscons-card .usecase p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Concepts Grid ───────────────────────────────────────────────────── */
+.galaxy-schema .concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.galaxy-schema .concept-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: border-color 0.3s;
+}
+
+.galaxy-schema .concept-card:hover {
+  border-color: var(--border-glow);
+}
+
+.galaxy-schema .concept-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.galaxy-schema .concept-card p {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .galaxy-diagram-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .gx-node {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  .gx-lines {
+    display: none;
+  }
+
+  .gx-fact-node {
+    order: 1;
+  }
+
+  .gx-dim-node {
+    order: 2;
+  }
+
+  .gx-unique-node {
+    order: 3;
+  }
+
+  .gx-fact-node.selected { transform: scale(1.05) !important; }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .triple-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .triple-proscons {
+    grid-template-columns: 1fr;
+  }
+
+  .galaxy-schema .query-tabs {
+    flex-wrap: wrap;
+  }
+
+  .galaxy-schema .concepts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galaxy-schema .diagram-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}

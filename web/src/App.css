@@ -160,6 +160,11 @@
   color: var(--accent-rose);
 }
 
+.badge-indigo {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-indigo);
+}
+
 /* Loading spinner */
 .loading {
   display: flex;

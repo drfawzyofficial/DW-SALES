@@ -116,6 +116,8 @@
 .feature-purple:hover { border-color: var(--accent-purple); }
 .feature-emerald:hover { border-color: var(--accent-emerald); }
 .feature-amber:hover { border-color: var(--accent-amber); }
+.feature-cyan:hover { border-color: var(--accent-cyan); }
+.feature-indigo:hover { border-color: var(--accent-indigo); }
 
 .feature-icon {
   font-size: 2rem;

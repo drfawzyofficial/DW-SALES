@@ -1,18 +1,18 @@
 # Sales Data Warehouse — ETL Pipeline & Dashboard
 
-A full-stack Data Warehouse project featuring a Python ETL pipeline, PostgreSQL **Star + Snowflake** schemas, Flask REST API, and an interactive React dashboard built with Vite.
+A full-stack Data Warehouse project featuring a Python ETL pipeline, PostgreSQL **Star + Snowflake + Galaxy** schemas, Flask REST API, and an interactive React dashboard built with Vite.
 
 ## Architecture
 
 ```
 CSV File ──→ Extract ──→ Transform ──→ Load ──→ PostgreSQL
                                                     │
-                                         ┌──────────┴──────────┐
-                                         ▼                     ▼
-                                   ⭐ Star Schema        ❄️ Snowflake Schema
-                                   (denormalized)         (normalized dims)
-                                         │                     │
-                                         └──────────┬──────────┘
+                                         ┌──────────┼──────────┐
+                                         ▼          ▼          ▼
+                                   ⭐ Star    ❄️ Snowflake  🌌 Galaxy
+                                   Schema     Schema       Schema
+                                         │          │          │
+                                         └──────────┼──────────┘
                                                     ▼
                                              Flask REST API
                                                     │
@@ -88,16 +88,62 @@ The **Snowflake Schema** further normalizes dimension tables by extracting repea
 └───────────────┘   └─────────────────────┘
 ```
 
-## Star vs Snowflake — Key Differences
+## Galaxy Schema (Fact Constellation)
 
-| Aspect            | ⭐ Star Schema                       | ❄️ Snowflake Schema                        |
-|-------------------|--------------------------------------|---------------------------------------------|
-| **Normalization** | Denormalized dimensions              | Normalized dimensions (sub-dimensions)      |
-| **JOINs needed**  | Fewer (simpler queries)              | More (extra JOINs to sub-dimensions)        |
-| **Redundancy**    | Higher (e.g., "USA" stored per row)  | Lower (country stored once in lookup table) |
-| **Query speed**   | Faster (fewer JOINs)                 | Slower (more JOINs)                         |
-| **Storage**       | More disk space                      | Less disk space                             |
-| **Maintenance**   | Easier to understand                 | Better data integrity                       |
+The **Galaxy Schema** (also called **Fact Constellation**) uses **multiple fact tables** that **share dimension tables**. This is how real-world enterprise data warehouses work — a business tracks many processes (sales, returns, inventory) that all reference the same entities.
+
+| Table                  | Type             | Description                                           |
+|------------------------|------------------|-------------------------------------------------------|
+| `fact_sales_galaxy`    | Fact (Sales)     | Order-level sales transactions                        |
+| `fact_returns_galaxy`  | Fact (Returns)   | Product returns with refund amounts                   |
+| `dim_customers`        | Shared Dimension | Customer info — shared by both fact tables             |
+| `dim_products`         | Shared Dimension | Product info — shared by both fact tables              |
+| `dim_date`             | Shared Dimension | Date breakdown — shared by both fact tables            |
+| `dim_return_reasons`   | Unique Dimension | Return reason lookup — only used by returns fact       |
+
+```
+                    ┌───────────────┐
+                    │  dim_customers│ ◄── SHARED
+                    │───────────────│
+                    │ customer_id   │◄──────────────┐
+                    │ customer_name │               │
+                    │ country       │◄───────┐      │
+                    └───────────────┘        │      │
+                                             │      │
+┌───────────────┐   ┌─────────────────────┐  │  ┌───┴─────────────────┐   ┌──────────────────┐
+│   dim_date    │   │  fact_sales_galaxy  │  │  │ fact_returns_galaxy │   │dim_return_reasons│
+│───────────────│   │─────────────────────│  │  │─────────────────────│   │──────────────────│
+│ date_id       │◄──│ order_id            │  │  │ return_id           │──►│ reason_id        │
+│ full_date     │   │ date_id        (FK) │  │  │ order_id            │   │ reason_name      │
+│ year          │   │ customer_id    (FK) │  │  │ date_id        (FK) │   └──────────────────┘
+│ month         │   │ product_id     (FK) │  │  │ customer_id    (FK) │
+│ day           │   │ quantity            │  │  │ product_id     (FK) │
+│ quarter       │   │ price               │  │  │ quantity_returned   │
+│ day_of_week   │◄──│ total_amount        │──┘  │ refund_amount       │
+└───────────────┘   └─────────────────────┘     │ reason_id      (FK) │
+                              │                 └─────────────────────┘
+                              │                           │
+                    ┌─────────▼───────┐                   │
+                    │  dim_products   │ ◄── SHARED        │
+                    │─────────────────│◄──────────────────┘
+                    │ product_id      │
+                    │ product_name    │
+                    │ category        │
+                    │ price           │
+                    └─────────────────┘
+```
+
+## Star vs Snowflake vs Galaxy — Key Differences
+
+| Aspect              | ⭐ Star Schema                    | ❄️ Snowflake Schema                   | 🌌 Galaxy Schema                          |
+|---------------------|------------------------------------|----------------------------------------|--------------------------------------------|
+| **Fact Tables**     | 1                                  | 1                                      | 2+ (multiple business processes)           |
+| **Normalization**   | Denormalized dimensions            | Normalized dimensions (sub-dims)       | Denormalized dims, shared across facts     |
+| **JOINs needed**    | Fewest (simplest queries)          | More (extra JOINs to sub-dims)         | Moderate (but cross-fact JOINs possible)   |
+| **Redundancy**      | Higher                             | Lowest                                 | Moderate (shared dims reduce duplication)  |
+| **Query speed**     | Fastest (fewer JOINs)              | Slower (more JOINs)                    | Depends on query type                      |
+| **Cross-process**   | ❌ Not possible                    | ❌ Not possible                        | ✅ Sales vs Returns analysis               |
+| **Best for**        | Simple data marts                  | Strict normalization needs             | Enterprise warehouses, multi-process       |
 
 ### Example: Sales by Country
 
@@ -118,6 +164,27 @@ JOIN dim_countries co   ON c.country_id  = co.country_id  -- extra JOIN
 GROUP BY co.country_name;
 ```
 
+### Example: Cross-Fact Analysis (Galaxy Only)
+
+**Galaxy Schema** — Revenue vs Refunds by Category:
+```sql
+WITH sales AS (
+    SELECT p.category, SUM(s.total_amount) AS revenue
+    FROM fact_sales_galaxy s
+    JOIN dim_products p ON s.product_id = p.product_id
+    GROUP BY p.category
+),
+returns AS (
+    SELECT p.category, SUM(r.refund_amount) AS refunds
+    FROM fact_returns_galaxy r
+    JOIN dim_products p ON r.product_id = p.product_id
+    GROUP BY p.category
+)
+SELECT s.category, s.revenue, COALESCE(r.refunds, 0) AS refunds,
+       s.revenue - COALESCE(r.refunds, 0) AS net_revenue
+FROM sales s LEFT JOIN returns r ON s.category = r.category;
+```
+
 ## Project Structure
 
 ```
@@ -126,7 +193,7 @@ DW/
 ├── etl_pipeline.py        # Main ETL pipeline (Extract → Transform → Load)
 ├── api.py                 # Flask REST API serving analytics data
 ├── run_queries.py         # Runs analytics queries and prints results
-├── queries.sql            # Star + Snowflake SQL queries for reference
+├── queries.sql            # Star + Snowflake + Galaxy SQL queries for reference
 ├── requirements.txt       # Python dependencies
 ├── data/
 │   └── sales_data.csv     # Sample dataset
@@ -144,6 +211,8 @@ DW/
             ├── Header.jsx / .css       # Navigation header
             ├── Overview.jsx / .css     # Project overview page
             ├── StarSchema.jsx / .css   # Interactive star schema diagram
+            ├── SnowflakeSchema.jsx / .css # Snowflake schema with comparison
+            ├── GalaxySchema.jsx / .css # Galaxy schema with cross-fact analysis
             ├── ETLPipeline.jsx / .css  # ETL pipeline visualization & log
             ├── Dashboard.jsx / .css    # Analytics charts & insights
             └── TableExplorer.jsx / .css# Browse table data
@@ -172,7 +241,7 @@ DATABASE_URL = "postgresql://your_user:your_password@localhost:5432/sales_dw"
 ```bash
 python etl_pipeline.py
 ```
-This creates **both** the Star Schema and Snowflake Schema tables, and loads data into all of them.
+This creates **all three** schemas (Star, Snowflake, Galaxy) and loads data into all tables.
 
 ### 5. Start the Flask API
 ```bash
@@ -195,24 +264,40 @@ python run_queries.py
 
 ## API Endpoints
 
-| Endpoint                    | Description                          |
-|-----------------------------|--------------------------------------|
-| `GET /api/schema`           | Star schema table info & row counts  |
-| `GET /api/etl-log`          | ETL pipeline log contents            |
-| `GET /api/sample/<table>`   | First 10 rows of a table             |
-| `GET /api/sales-by-country` | Total sales aggregated by country    |
-| `GET /api/top-products`     | Top 5 products by revenue            |
-| `GET /api/monthly-revenue`  | Monthly revenue trend                |
-| `GET /api/top-customers`    | Top 10 customers by spending         |
-| `GET /api/quarterly-category`| Quarterly revenue by product category|
+| Endpoint                         | Description                                |
+|----------------------------------|--------------------------------------------|
+| **Star Schema**                  |                                            |
+| `GET /api/schema`                | Star schema table info & row counts        |
+| `GET /api/etl-log`              | ETL pipeline log contents                  |
+| `GET /api/sample/<table>`        | First 10 rows of a table                   |
+| `GET /api/sales-by-country`      | Total sales aggregated by country          |
+| `GET /api/top-products`          | Top 5 products by revenue                  |
+| `GET /api/monthly-revenue`       | Monthly revenue trend                      |
+| `GET /api/top-customers`         | Top 10 customers by spending               |
+| `GET /api/quarterly-category`    | Quarterly revenue by product category      |
+| **Snowflake Schema**             |                                            |
+| `GET /api/snowflake-schema`      | Snowflake schema table info                |
+| `GET /api/snowflake-sample/<t>`  | First 10 rows of a snowflake table         |
+| `GET /api/snowflake-sales-by-country` | Sales by country (normalized)         |
+| `GET /api/snowflake-top-products`| Top products (normalized)                  |
+| `GET /api/snowflake-comparison`  | Star vs Snowflake comparison               |
+| **Galaxy Schema**                |                                            |
+| `GET /api/galaxy-schema`         | Galaxy schema table info & row counts      |
+| `GET /api/galaxy-sample/<table>` | First 10 rows of a galaxy table            |
+| `GET /api/galaxy-returns-by-reason` | Returns aggregated by reason            |
+| `GET /api/galaxy-returns-by-country`| Returns aggregated by country           |
+| `GET /api/galaxy-revenue-vs-returns`| Revenue vs refunds (cross-fact)         |
+| `GET /api/galaxy-monthly-returns`| Monthly returns trend                      |
+| `GET /api/galaxy-comparison`     | All 3 schemas comparison                   |
 
 ## Technologies
 
 - **Python 3.x** — Core language
 - **pandas** — Data manipulation and transformation
+- **NumPy** — Random data generation for simulated returns
 - **SQLAlchemy** — ORM and database connection
 - **psycopg2** — PostgreSQL adapter
-- **PostgreSQL** — Data warehouse storage (Star + Snowflake schemas)
+- **PostgreSQL** — Data warehouse storage (Star + Snowflake + Galaxy schemas)
 - **Flask** — REST API backend
 - **Flask-CORS** — Cross-origin resource sharing
 - **React 19** — Frontend UI library

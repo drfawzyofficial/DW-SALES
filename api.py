@@ -22,6 +22,15 @@ Endpoints:
     GET /api/snowflake-top-products       → Top products (using normalized tables)
     GET /api/snowflake-comparison         → Star vs Snowflake comparison data
 
+    ── Galaxy Schema (Fact Constellation) ──
+    GET /api/galaxy-schema       → Galaxy schema table info (columns, row counts)
+    GET /api/galaxy-sample/<table>→ First 10 rows of a galaxy table
+    GET /api/galaxy-returns-by-reason → Returns aggregated by reason
+    GET /api/galaxy-returns-by-country→ Returns aggregated by country
+    GET /api/galaxy-revenue-vs-returns→ Revenue vs refunds by product
+    GET /api/galaxy-monthly-returns   → Monthly returns trend
+    GET /api/galaxy-comparison        → All three schemas comparison data
+
 Usage:
     python3 api.py
 """
@@ -444,6 +453,265 @@ def snowflake_comparison():
             "total_rows": total_sf_rows,
             "joins_for_country_query": 2,    # fact → dim_customers_sf → dim_countries
             "joins_for_product_query": 2,    # fact → dim_products_sf → dim_categories
+        },
+    })
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# GALAXY SCHEMA (FACT CONSTELLATION) ENDPOINTS
+# ══════════════════════════════════════════════════════════════════════════════
+# The Galaxy Schema (Fact Constellation) uses MULTIPLE fact tables that
+# SHARE the same dimension tables. This is how real-world enterprise
+# data warehouses work: a business tracks many processes (sales, returns,
+# inventory, shipping) that all reference the same entities.
+#
+# Our galaxy schema has:
+#   - fact_sales_galaxy    → sales transactions (shares star schema dims)
+#   - fact_returns_galaxy  → product returns (NEW fact table)
+#   - dim_return_reasons   → why an item was returned (NEW dimension)
+#
+# Key difference from star/snowflake:
+#   Star:      1 fact table  + 3 dimensions
+#   Snowflake: 1 fact table  + 3 dimensions + 2 sub-dimensions
+#   Galaxy:    2 fact tables + 4 dimensions (shared + unique)
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.route("/api/galaxy-schema")
+def get_galaxy_schema():
+    """
+    Return galaxy schema table info (columns, row counts).
+
+    The galaxy schema has TWO fact tables (sales and returns) that share
+    the same dimension tables (customers, products, date) plus a new
+    dim_return_reasons dimension that is unique to the returns fact table.
+    """
+    tables = {}
+    galaxy_tables = [
+        "dim_customers",         # Shared dimension
+        "dim_products",          # Shared dimension
+        "dim_date",              # Shared dimension
+        "dim_return_reasons",    # Returns-only dimension
+        "fact_sales_galaxy",     # Fact table 1: sales
+        "fact_returns_galaxy",   # Fact table 2: returns
+    ]
+    for table in galaxy_tables:
+        cols = query_to_list(f"""
+            SELECT column_name, data_type
+            FROM information_schema.columns
+            WHERE table_name = '{table}'
+            ORDER BY ordinal_position
+        """)
+        count = query_to_list(f"SELECT COUNT(*) as count FROM {table}")[0]["count"]
+        tables[table] = {"columns": cols, "row_count": count}
+    return jsonify(tables)
+
+
+@app.route("/api/galaxy-sample/<table_name>")
+def get_galaxy_sample(table_name):
+    """
+    Return first 10 rows of a galaxy schema table.
+    """
+    allowed = [
+        "dim_customers", "dim_products", "dim_date",
+        "dim_return_reasons",
+        "fact_sales_galaxy", "fact_returns_galaxy",
+    ]
+    if table_name not in allowed:
+        return jsonify({"error": "Invalid table name"}), 400
+    rows = query_to_list(f"SELECT * FROM {table_name} LIMIT 10")
+    for row in rows:
+        for k, v in row.items():
+            if hasattr(v, "isoformat"):
+                row[k] = v.isoformat()
+    return jsonify(rows)
+
+
+@app.route("/api/galaxy-returns-by-reason")
+def galaxy_returns_by_reason():
+    """
+    Returns aggregated by reason.
+
+    SQL Explanation:
+    - JOIN fact_returns_galaxy with dim_return_reasons on reason_id
+    - GROUP BY reason to see why customers return products
+    - This query is ONLY possible in the galaxy schema because
+      the returns fact table and reason dimension don't exist in star/snowflake
+    """
+    data = query_to_list("""
+        SELECT
+            r.reason_name,
+            COUNT(f.return_id)::int AS total_returns,
+            SUM(f.quantity_returned)::int AS total_units_returned,
+            ROUND(SUM(f.refund_amount)::numeric, 2)::float AS total_refunds
+        FROM fact_returns_galaxy f
+        JOIN dim_return_reasons r ON f.reason_id = r.reason_id
+        GROUP BY r.reason_name
+        ORDER BY total_returns DESC
+    """)
+    return jsonify(data)
+
+
+@app.route("/api/galaxy-returns-by-country")
+def galaxy_returns_by_country():
+    """
+    Returns aggregated by country.
+
+    SQL Explanation:
+    - This demonstrates the SHARED dimension concept: both fact_sales_galaxy
+      and fact_returns_galaxy reference the SAME dim_customers table.
+    - We join fact_returns_galaxy → dim_customers to get country.
+    """
+    data = query_to_list("""
+        SELECT
+            c.country,
+            COUNT(f.return_id)::int AS total_returns,
+            SUM(f.quantity_returned)::int AS total_units_returned,
+            ROUND(SUM(f.refund_amount)::numeric, 2)::float AS total_refunds
+        FROM fact_returns_galaxy f
+        JOIN dim_customers c ON f.customer_id = c.customer_id
+        GROUP BY c.country
+        ORDER BY total_refunds DESC
+    """)
+    return jsonify(data)
+
+
+@app.route("/api/galaxy-revenue-vs-returns")
+def galaxy_revenue_vs_returns():
+    """
+    Revenue vs refunds by product category.
+
+    SQL Explanation:
+    - This is the KEY galaxy schema query: it joins data from BOTH fact tables
+      through their SHARED dim_products dimension.
+    - First CTE aggregates sales, second CTE aggregates returns.
+    - Final SELECT joins them to show net revenue per category.
+    - This type of cross-fact analysis is what makes the galaxy schema powerful.
+    """
+    data = query_to_list("""
+        WITH sales_agg AS (
+            SELECT
+                p.category,
+                ROUND(SUM(s.total_amount)::numeric, 2)::float AS total_revenue,
+                COUNT(s.order_id)::int AS total_orders
+            FROM fact_sales_galaxy s
+            JOIN dim_products p ON s.product_id = p.product_id
+            GROUP BY p.category
+        ),
+        returns_agg AS (
+            SELECT
+                p.category,
+                ROUND(SUM(r.refund_amount)::numeric, 2)::float AS total_refunds,
+                COUNT(r.return_id)::int AS total_returns
+            FROM fact_returns_galaxy r
+            JOIN dim_products p ON r.product_id = p.product_id
+            GROUP BY p.category
+        )
+        SELECT
+            s.category,
+            s.total_revenue,
+            s.total_orders,
+            COALESCE(r.total_refunds, 0)::float AS total_refunds,
+            COALESCE(r.total_returns, 0)::int  AS total_returns,
+            ROUND((s.total_revenue - COALESCE(r.total_refunds, 0))::numeric, 2)::float AS net_revenue
+        FROM sales_agg s
+        LEFT JOIN returns_agg r ON s.category = r.category
+        ORDER BY net_revenue DESC
+    """)
+    return jsonify(data)
+
+
+@app.route("/api/galaxy-monthly-returns")
+def galaxy_monthly_returns():
+    """
+    Monthly returns trend.
+
+    SQL Explanation:
+    - Similar to monthly-revenue but for the returns fact table.
+    - Shares dim_date dimension with sales, enabling time-based analysis
+      on both business processes using the same calendar.
+    """
+    data = query_to_list("""
+        SELECT
+            d.year::int AS year,
+            d.month::int AS month,
+            COUNT(f.return_id)::int AS total_returns,
+            ROUND(SUM(f.refund_amount)::numeric, 2)::float AS monthly_refunds
+        FROM fact_returns_galaxy f
+        JOIN dim_date d ON f.date_id = d.date_id
+        GROUP BY d.year, d.month
+        ORDER BY d.year, d.month
+    """)
+    month_names = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    for row in data:
+        row["label"] = f"{month_names[row['month']]} {row['year']}"
+    return jsonify(data)
+
+
+@app.route("/api/galaxy-comparison")
+def galaxy_comparison():
+    """
+    Return comparison data between all three schemas.
+
+    This endpoint provides side-by-side metrics so students can understand
+    the structural differences between Star, Snowflake, and Galaxy schemas.
+    """
+    def get_metrics(table_list):
+        info = {}
+        total_cols = 0
+        total_rows = 0
+        for t in table_list:
+            cols = query_to_list(f"""
+                SELECT COUNT(*) as count FROM information_schema.columns
+                WHERE table_name = '{t}'
+            """)[0]["count"]
+            rows = query_to_list(f"SELECT COUNT(*) as count FROM {t}")[0]["count"]
+            info[t] = {"columns": cols, "rows": rows}
+            total_cols += cols
+            total_rows += rows
+        return info, total_cols, total_rows
+
+    # Star schema metrics
+    star_tables = ["dim_customers", "dim_products", "dim_date", "fact_sales"]
+    star_info, total_star_cols, total_star_rows = get_metrics(star_tables)
+
+    # Snowflake schema metrics
+    sf_tables = ["dim_categories", "dim_countries", "dim_products_sf",
+                 "dim_customers_sf", "dim_date", "fact_sales_sf"]
+    sf_info, total_sf_cols, total_sf_rows = get_metrics(sf_tables)
+
+    # Galaxy schema metrics
+    galaxy_tables = ["dim_customers", "dim_products", "dim_date",
+                     "dim_return_reasons", "fact_sales_galaxy", "fact_returns_galaxy"]
+    galaxy_info, total_galaxy_cols, total_galaxy_rows = get_metrics(galaxy_tables)
+
+    return jsonify({
+        "star": {
+            "tables": star_info,
+            "total_tables": len(star_tables),
+            "total_columns": total_star_cols,
+            "total_rows": total_star_rows,
+            "fact_tables": 1,
+            "joins_for_country_query": 1,
+            "joins_for_product_query": 1,
+        },
+        "snowflake": {
+            "tables": sf_info,
+            "total_tables": len(sf_tables),
+            "total_columns": total_sf_cols,
+            "total_rows": total_sf_rows,
+            "fact_tables": 1,
+            "joins_for_country_query": 2,
+            "joins_for_product_query": 2,
+        },
+        "galaxy": {
+            "tables": galaxy_info,
+            "total_tables": len(galaxy_tables),
+            "total_columns": total_galaxy_cols,
+            "total_rows": total_galaxy_rows,
+            "fact_tables": 2,
+            "joins_for_country_query": 1,
+            "joins_for_product_query": 1,
         },
     })
 

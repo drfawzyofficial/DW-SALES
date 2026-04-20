@@ -168,3 +168,109 @@ JOIN dim_products_sf p  ON f.product_id  = p.product_id
 JOIN dim_categories cat ON p.category_id = cat.category_id  -- ← EXTRA JOIN!
 GROUP BY d.year, d.quarter, cat.category_name
 ORDER BY d.year, d.quarter, quarterly_revenue DESC;
+
+
+-- =============================================================================
+-- GALAXY SCHEMA (FACT CONSTELLATION) QUERIES
+-- =============================================================================
+-- The Galaxy Schema uses MULTIPLE fact tables that SHARE dimension tables.
+-- This enables cross-fact analysis — combining data from different business
+-- processes (sales + returns) through shared dimensions.
+--
+-- Key tables:
+--   fact_sales_galaxy    → sales transactions (shares star dims)
+--   fact_returns_galaxy  → product returns (second fact table)
+--   dim_return_reasons   → why items were returned (unique to returns)
+--   dim_customers, dim_products, dim_date → SHARED dimensions
+-- =============================================================================
+
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- 9. GALAXY: RETURNS BY REASON
+-- ─────────────────────────────────────────────────────────────────────────────
+-- This query is ONLY possible in the galaxy schema — the returns fact table
+-- and return reasons dimension don't exist in star or snowflake schemas.
+
+SELECT
+    r.reason_name,
+    COUNT(f.return_id)          AS total_returns,
+    SUM(f.quantity_returned)    AS total_units_returned,
+    ROUND(SUM(f.refund_amount)::numeric, 2) AS total_refunds
+FROM fact_returns_galaxy f
+JOIN dim_return_reasons r ON f.reason_id = r.reason_id
+GROUP BY r.reason_name
+ORDER BY total_returns DESC;
+
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- 10. GALAXY: RETURNS BY COUNTRY (SHARED DIMENSION)
+-- ─────────────────────────────────────────────────────────────────────────────
+-- This demonstrates the SHARED dimension concept:
+--   fact_returns_galaxy → dim_customers (SAME table used by fact_sales_galaxy)
+-- Both fact tables reference the same dim_customers, enabling consistent
+-- customer analytics across sales and returns.
+
+SELECT
+    c.country,
+    COUNT(f.return_id)          AS total_returns,
+    SUM(f.quantity_returned)    AS total_units_returned,
+    ROUND(SUM(f.refund_amount)::numeric, 2) AS total_refunds
+FROM fact_returns_galaxy f
+JOIN dim_customers c ON f.customer_id = c.customer_id
+GROUP BY c.country
+ORDER BY total_refunds DESC;
+
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- 11. GALAXY: CROSS-FACT ANALYSIS — Revenue vs Refunds by Category
+-- ─────────────────────────────────────────────────────────────────────────────
+-- This is the KEY galaxy schema query — it joins data from BOTH fact tables
+-- through their SHARED dim_products dimension using CTEs.
+-- This type of cross-process analysis is IMPOSSIBLE in star/snowflake schemas.
+
+WITH sales_agg AS (
+    SELECT
+        p.category,
+        ROUND(SUM(s.total_amount)::numeric, 2) AS total_revenue,
+        COUNT(s.order_id)       AS total_orders
+    FROM fact_sales_galaxy s
+    JOIN dim_products p ON s.product_id = p.product_id
+    GROUP BY p.category
+),
+returns_agg AS (
+    SELECT
+        p.category,
+        ROUND(SUM(r.refund_amount)::numeric, 2) AS total_refunds,
+        COUNT(r.return_id)      AS total_returns
+    FROM fact_returns_galaxy r
+    JOIN dim_products p ON r.product_id = p.product_id
+    GROUP BY p.category
+)
+SELECT
+    s.category,
+    s.total_revenue,
+    s.total_orders,
+    COALESCE(r.total_refunds, 0) AS total_refunds,
+    COALESCE(r.total_returns, 0) AS total_returns,
+    ROUND((s.total_revenue - COALESCE(r.total_refunds, 0))::numeric, 2) AS net_revenue
+FROM sales_agg s
+LEFT JOIN returns_agg r ON s.category = r.category
+ORDER BY net_revenue DESC;
+
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- 12. GALAXY: MONTHLY RETURNS TREND
+-- ─────────────────────────────────────────────────────────────────────────────
+-- Same dim_date shared between sales and returns enables time-based analysis
+-- on both business processes using the same calendar.
+
+SELECT
+    d.year,
+    d.month,
+    COUNT(f.return_id)          AS total_returns,
+    ROUND(SUM(f.refund_amount)::numeric, 2) AS monthly_refunds
+FROM fact_returns_galaxy f
+JOIN dim_date d ON f.date_id = d.date_id
+GROUP BY d.year, d.month
+ORDER BY d.year, d.month;
+
